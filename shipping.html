@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shipping &amp; returns — ANGEOLOGY cruelty free cosmetics</title>
+  <meta name="description" content="The ANGEOLOGY shipping hotline: rates per country, delivery times, plastic-free packaging and 30-day returns.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Montserrat:wght@300;400;500;600&family=Imperial+Script&family=Pinyon+Script&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shipping.css">
+</head>
+<body data-loader="short">
+
+  <!-- shared SVG: baroque cartouche for the logo -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#b9bcc6"/>
+        <stop offset=".5" stop-color="#eef0f4"/><stop offset=".7" stop-color="#8e919b"/><stop offset="1" stop-color="#d9dbe1"/>
+      </linearGradient>
+      <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+        <rect width="10" height="10" fill="#fff7fa"/><circle cx="5" cy="5" r="1.3" fill="#ffc9da"/>
+      </pattern>
+      <symbol id="cartouche" viewBox="0 0 400 180">
+        <g fill="none" stroke="url(#silver)" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M72,38 C120,18 160,26 200,20 C240,26 280,18 328,38 C352,46 366,62 372,90 C366,118 352,134 328,142 C280,162 240,154 200,160 C160,154 120,162 72,142 C48,134 34,118 28,90 C34,62 48,46 72,38Z" fill="url(#dots)" stroke-width="6"/>
+          <path d="M78,48 C122,30 162,37 200,32 C238,37 278,30 322,48 C342,56 354,70 359,90 C354,110 342,124 322,132 C278,150 238,143 200,148 C162,143 122,150 78,132 C58,124 46,110 41,90 C46,70 58,56 78,48Z" stroke-width="1.6" stroke="#e7a3bb"/>
+          <path d="M28,90 C14,82 4,66 12,52 C20,40 38,44 36,56 C35,64 26,64 25,58" stroke-width="5"/>
+          <path d="M28,90 C14,98 4,114 12,128 C20,140 38,136 36,124 C35,116 26,116 25,122" stroke-width="5"/>
+          <path d="M372,90 C386,82 396,66 388,52 C380,40 362,44 364,56 C365,64 374,64 375,58" stroke-width="5"/>
+          <path d="M372,90 C386,98 396,114 388,128 C380,140 362,136 364,124 C365,116 374,116 375,122" stroke-width="5"/>
+          <path d="M72,38 C62,22 72,8 88,12 C98,15 96,28 86,27" stroke-width="4"/>
+          <path d="M328,38 C338,22 328,8 312,12 C302,15 304,28 314,27" stroke-width="4"/>
+          <path d="M72,142 C62,158 72,172 88,168 C98,165 96,152 86,153" stroke-width="4"/>
+          <path d="M328,142 C338,158 328,172 312,168 C302,165 304,152 314,153" stroke-width="4"/>
+          <path d="M168,24 C160,8 176,0 186,8 C192,13 188,20 182,18" stroke-width="4"/>
+          <path d="M232,24 C240,8 224,0 214,8 C208,13 212,20 218,18" stroke-width="4"/>
+          <path d="M170,156 C162,172 178,180 188,172 C194,167 190,160 184,162" stroke-width="4"/>
+          <path d="M230,156 C238,172 222,180 212,172 C206,167 210,160 216,162" stroke-width="4"/>
+          <path d="M200,172 C190,164 190,156 196,155 C198,155 200,157 200,159 C200,157 202,155 204,155 C210,156 210,164 200,172Z" fill="#f59ab8" stroke-width="1.5"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ LOADER ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <img class="loader-bow" src="img/deco/bow.png" alt="">
+      <div class="loader-pearls" id="loaderPearls"></div>
+      <p class="loader-word">Angeology</p>
+      <p class="loader-sub"><span id="loaderCount">0</span>% &middot; cruelty free, always</p>
+    </div>
+  </div>
+
+  <!-- ============ NAV: every page, one row, one style ============ -->
+  <header class="topnav" id="topnav">
+    <a class="nav-logo" href="index.html" aria-label="Angeology — home">Angeology</a>
+    <nav aria-label="Main">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="shop.html"><span class="t">Shop</span><span class="s" aria-hidden="true">shop</span></a></li>
+        <li><a href="collections.html"><span class="t">Collections</span><span class="s" aria-hidden="true">collections</span></a></li>
+        <li><a href="lookbook.html"><span class="t">Lookbook</span><span class="s" aria-hidden="true">lookbook</span></a></li>
+        <li><a href="cruelty-free.html"><span class="t">Cruelty free</span><span class="s" aria-hidden="true">cruelty free</span></a></li>
+        <li><a href="about.html"><span class="t">Our story</span><span class="s" aria-hidden="true">our story</span></a></li>
+        <li><a href="contact.html"><span class="t">Contact</span><span class="s" aria-hidden="true">contact</span></a></li>
+        <li><a href="search.html"><span class="t">Search</span><span class="s" aria-hidden="true">search</span></a></li>
+        <li><a href="account.html"><span class="t">Account</span><span class="s" aria-hidden="true">account</span></a></li>
+        <li><a href="cart.html"><span class="t">Bag (0)</span><span class="s" aria-hidden="true">bag (0)</span></a></li>
+      </ul>
+      <span class="nav-heart" id="navHeart" aria-hidden="true">♡</span>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+  </header>
+
+  <!-- menu overlay (tablet / mobile) -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu-page">
+      <button class="menu-close" id="menuClose">Close</button>
+      <p class="menu-title">Index</p>
+      <ol class="menu-list" id="menuList"></ol>
+      <img src="img/deco/bow.png" alt="" class="menu-bow">
+    </div>
+  </div>
+
+  <main class="ship-page">
+
+    <!-- ============ HERO: the shipping hotline ============ -->
+    <section class="hl-hero" id="top">
+      <figure class="hl-photo">
+        <div class="slot" data-img="shipping.jpg" data-alt="A girl lying on a pink bed with her legs up, talking on a vintage telephone and holding a glass" data-ratio="3 / 4"><span class="slot-label">shipping.jpg</span></div>
+        <span class="hl-tape" aria-hidden="true"></span>
+        <p class="bubble b1" aria-hidden="true">hello?</p>
+        <p class="bubble b2" aria-hidden="true">is it here <em>yet?</em></p>
+        <p class="bubble b3" aria-hidden="true">♡</p>
+      </figure>
+      <div class="hl-copy">
+        <p class="hl-kicker"><span>the shipping hotline</span><span>open 24/7 ♡</span></p>
+        <h1 class="hl-title"><span class="hl-in">Is it</span> <em class="script hl-in">here</em> <span class="hl-in">yet?</span></h1>
+        <p class="hl-lede">Every parcel is packed by hand, wrapped without plastic and sent your way. This is what it costs, how long it takes, and what to do if you change your mind.</p>
+        <p class="hl-preview"><b>preview</b> Checkout isn’t open yet. These are the rates and rules that will apply when it opens.</p>
+        <ul class="hl-lines">
+          <li><span>free shipping in Italy</span><b>from € 40</b></li>
+          <li><span>packed by hand</span><b>in 1–2 days</b></li>
+          <li><span>changed your mind?</span><b>30 days</b></li>
+        </ul>
+      </div>
+      <svg class="cord" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path id="cordPath" d="M33,60 L35,66 L35,72 L35,76 L34,80 L33,82 L32,83 L30,82 L29,80 L29,76 L29,71 L30,66 L32,60 L35,55 L38,50 L43,45 L48,43 L53,41 L59,41 L64,43 L70,46 L74,51 L78,56 L81,62 L83,68 L83,74 L84,79 L83,83 L82,86 L81,87 L79,87 L78,85 L77,82 L77,77 L78,72 L80,66 L82,60 L85,55 L90,51 L95,47 L100,45 L106,45 L111,46 L116,49 L121,53 L125,58 L128,64 L130,70 L132,76 L132,81 L132,86 L131,89 L129,91 L128,91 L127,89 L126,86 L125,82 L126,77 L127,72 L129,66 L133,60 L137,56 L141,52 L146,49 L152,49 L158,49 L163,51 L168,55 L172,60 L175,65 L178,71 L180,77 L180,83 L180,88 L179,91 L178,93 L177,94 L175,93 L174,91 L174,87 L174,82 L175,77 L177,71 L180,65 L183,60 L188,56 L193,53 L198,51 L204,52 L209,53 L215,56 L219,61 L223,66 L226,72 L228,78 L228,84 L229,89 L228,93 L227,95 L226,96 L224,96 L223,94 L222,90 L222,86 L223,81 L224,75 L227,69 L230,64 L235,59 L240,56 L245,54 L251,53 L256,54 L261,57 L266,61 L270,66 L273,71 L275,77 L277,83 L277,88 L277,93 L276,96 L274,97 L273,98 L272,96 L271,93 L270,89 L271,84 L272,78 L274,72 L278,66 L282,61 L286,58 L291,55 L297,54 L303,55 L308,57 L313,60 L317,65 L320,70 L323,76 L325,82 L325,87 L325,92 L324,95 L323,97 L322,98 L320,97 L319,94 L319,90 L319,85 L320,80 L322,74 L325,68 L328,63 L333,59 L338,56 L343,54 L349,54 L354,55 L360,58 L364,63 L368,68 L371,73 L373,79 L373,85 L374,90 L373,94 L372,96 L371,97 L369,97 L368,94 L367,91 L367,86 L368,81 L370,75 L372,69 L375,63 L380,59 L385,55 L390,53 L396,52 L401,53 L406,56 L411,60 L415,64 L418,70 L420,76 L422,81 L422,87 L422,91 L421,94 L419,95 L418,95 L417,93 L416,90 L415,86 L416,81 L417,75 L419,69 L423,63 L427,58 L431,54 L436,51 L442,50 L448,50 L453,52 L458,56 L462,60 L465,66 L468,71 L470,77 L470,82 L470,87 L469,90 L468,92 L467,93 L465,91 L464,89 L464,85 L464,80 L465,74 L467,68 L470,62 L473,56 L478,52 L483,49 L488,47 L494,47 L499,48 L505,51 L509,55 L513,60 L516,66 L518,72 L518,77 L519,82 L518,86 L517,88 L516,89 L514,88 L513,86 L512,83 L512,78 L513,72 L514,66 L517,60 L520,55 L525,50 L530,46 L535,44 L541,43 L546,44 L551,46 L556,50 L560,55 L563,60 L565,66 L567,72 L567,77 L567,81 L566,84 L564,85 L563,85 L562,83 L561,80 L560,75 L561,70 L562,64 L564,58 L568,52 L572,47 L576,43 L581,40 L587,39 L593,39 L598,41 L603,45 L607,49 L610,54 L613,60 L615,66 L615,71 L615,75 L614,79 L613,81 L612,81 L610,80 L609,77 L609,73 L609,68 L610,62 L612,56 L615,50 L618,45 L623,40 L628,37 L633,35 L639,35 L644,36 L650,39 L654,43 L658,48 L661,54 L663,60 L663,65 L664,70 L663,74 L662,76 L661,77 L659,76 L658,74 L657,70 L657,65 L658,60 L660,54 L662,48 L665,42 L670,37 L675,34 L680,32 L686,31 L691,32 L696,34 L701,38 L705,43 L708,48 L710,54 L712,60 L712,65 L712,69 L711,72 L709,73 L708,73 L707,71 L706,68 L705,64 L706,58 L707,52 L709,46 L713,40 L717,35 L721,31 L726,29 L732,27 L738,28 L743,30 L748,33 L752,38 L755,43 L758,49 L760,54 L760,60 L760,64 L759,68 L758,70 L757,70 L755,69 L754,66 L754,62 L754,57 L755,51 L757,45 L760,39 L763,34 L768,30 L773,27 L778,25 L784,25 L789,26 L795,29 L799,33 L803,39 L806,44 L808,50 L808,56 L809,60 L808,64 L807,67 L806,68 L804,67 L803,65 L802,61 L802,57 L803,51 L804,45 L807,39 L810,34 L815,29 L820,26 L825,23 L831,23 L836,24 L841,26 L846,30 L850,35 L853,41 L855,47 L857,52 L857,57 L857,62 L856,65 L854,66 L853,66 L852,64 L851,61 L850,57 L851,52 L852,46 L854,40 L858,35 L862,30 L866,26 L871,23 L877,22 L883,23 L888,25 L893,28 L897,33 L900,38 L903,44 L905,50 L905,55 L905,60 L904,63 L903,65 L902,66 L900,65 L899,62 L899,59 L899,54 L900,48 L902,42 L905,36 L908,31 L913,27 L918,24 L923,22 L929,23 L934,24 L940,27 L944,32 L948,37 L951,43 L953,49 L953,54 L954,59 L953,63 L952,66 L951,67 L949,66 L948,64 L947,61 L947,56 L948,51 L950,45 L952,39 L955,34 L960,30 L965,26 L970,24 L976,24 L981,25 L986,27 L991,31 L995,36 L998,42 L1000,48 L1002,54 L1002,59 L1002,64 L1001,67 L999,68 L998,69 L997,67 L996,64 L995,60 L996,55 L997,49 L999,43 L1003,38 L1007,33 L1011,29 L1016,27 L1022,26 L1028,27 L1033,29 L1038,32 L1042,37 L1045,43 L1048,49 L1050,55 L1050,60 L1050,65 L1049,69 L1048,71 L1047,71 L1045,71 L1044,68 L1044,64 L1044,60 L1045,54 L1047,48 L1050,43 L1053,38 L1058,34 L1063,31 L1068,29 L1074,29 L1079,31 L1085,34 L1089,39 L1093,44 L1096,50 L1098,56 L1098,62 L1099,67 L1098,71 L1097,74 L1096,75 L1094,75 L1093,73 L1092,69 L1092,65 L1093,60 L1094,54 L1097,48 L1100,43 L1105,38 L1110,35 L1115,33 L1121,33 L1126,34 L1131,37 L1136,41 L1140,46 L1143,52 L1145,58 L1147,64 L1147,69 L1147,74 L1146,77 L1144,79 L1143,79 L1142,77 L1141,75 L1140,70 L1141,65 L1142,60 L1144,54 L1148,49 L1152,44 L1156,40 L1161,38 L1167,37 L1173,38 L1178,40 L1183,44 L1187,48 L1190,54 L1193,60"/></svg>
+    </section>
+
+    <!-- ============ THE PINK PAGES: rates ============ -->
+    <section class="pages" id="rates">
+      <div class="pp-book">
+        <header class="pp-head">
+          <p class="pp-k">directory of postage · 2026 edition</p>
+          <h2 class="pp-title">The pink <em class="script">pages</em></h2>
+          <p class="pp-sub">Tap where your parcel is going.</p>
+        </header>
+        <div class="pp-spread">
+          <ol class="pp-list" id="zones" role="radiogroup" aria-label="Destination">
+            <li><button type="button" role="radio" aria-checked="true" data-zone="it"><span class="pz-letter">I</span><span class="pz-name">Italy</span><span class="pz-dots" aria-hidden="true"></span><span class="pz-price">€ 4,90</span><span class="pz-meta">2–4 working days · free from € 40</span></button></li>
+            <li><button type="button" role="radio" aria-checked="false" data-zone="eu"><span class="pz-letter">E</span><span class="pz-name">European Union</span><span class="pz-dots" aria-hidden="true"></span><span class="pz-price">€ 7,90</span><span class="pz-meta">4–7 working days · free from € 60</span></button></li>
+            <li><button type="button" role="radio" aria-checked="false" data-zone="uk"><span class="pz-letter">U</span><span class="pz-name">UK &amp; Switzerland</span><span class="pz-dots" aria-hidden="true"></span><span class="pz-price">€ 12</span><span class="pz-meta">5–8 working days · free from € 80</span></button></li>
+            <li><button type="button" role="radio" aria-checked="false" data-zone="us"><span class="pz-letter">A</span><span class="pz-name">USA &amp; Canada</span><span class="pz-dots" aria-hidden="true"></span><span class="pz-price">€ 15</span><span class="pz-meta">6–10 working days · free from € 90</span></button></li>
+            <li><button type="button" role="radio" aria-checked="false" data-zone="world"><span class="pz-letter">W</span><span class="pz-name">Rest of the world</span><span class="pz-dots" aria-hidden="true"></span><span class="pz-price">€ 19</span><span class="pz-meta">8–15 working days · free from € 120</span></button></li>
+          </ol>
+
+          <div class="memo-pad" id="estimate" aria-live="polite">
+            <img src="img/deco/pin.png" alt="" class="mp-pin">
+            <p class="mp-title">While you were <em>out</em></p>
+            <dl class="mp-fields">
+              <dt>to</dt><dd>you, angel</dd>
+              <dt>from</dt><dd>your bag</dd>
+              <dt>about</dt><dd id="mpAbout">shipping to Italy</dd>
+            </dl>
+            <p class="mp-k">message</p>
+            <p class="mp-msg" id="mpMsg"></p>
+            <div class="mp-track" aria-hidden="true"><span id="mpFill"></span><img src="img/deco/bow.png" alt="" id="mpBow"></div>
+            <p class="mp-checks"><span class="on">please call back</span><span>urgent</span><span class="on">will ship again</span></p>
+          </div>
+        </div>
+        <p class="pp-note">Duties and import taxes outside the EU are paid by the receiver on arrival. Working days are Monday to Friday, holidays excluded.</p>
+      </div>
+    </section>
+
+    <!-- ============ PRESS 1–4: the journey ============ -->
+    <section class="keypad-sec" id="journey">
+      <header class="kp-head">
+        <p class="sec-num">03</p>
+        <h2 class="sec-title">Press <em class="script">one</em> for&nbsp;love</h2>
+        <p class="kp-sub">What happens after you order, one button at a time.</p>
+      </header>
+      <ol class="keys">
+        <li class="key-row"><span class="key" aria-hidden="true"><b>1</b><small>pack</small></span><div><h3>Packed by hand</h3><p>Within 1–2 working days, one of us picks every piece and checks each shade.</p></div></li>
+        <li class="key-row"><span class="key" aria-hidden="true"><b>2</b><small>wrap</small></span><div><h3>Wrapped softly</h3><p>Recycled tissue, a paper sticker and a satin-effect bow if you asked for one. No plastic, nothing from an animal.</p></div></li>
+        <li class="key-row"><span class="key" aria-hidden="true"><b>3</b><small>send</small></span><div><h3>On its way</h3><p>The moment it leaves, a tracking link lands in your inbox.</p></div></li>
+        <li class="key-row"><span class="key" aria-hidden="true"><b>4</b><small>love</small></span><div><h3>Landed</h3><p>Open it, swatch everything, fall a little in love. If something’s wrong, we’ll make it right.</p></div></li>
+      </ol>
+      <div class="kp-box">
+        <p class="kp-box-k">what’s in the box</p>
+        <ul>
+          <li><img src="img/deco/envelope.png" alt=""><span><b>Recycled paper box</b> recyclable again</span></li>
+          <li><img src="img/deco/pin.png" alt=""><span><b>Paper tape</b> never plastic</span></li>
+          <li><img src="img/deco/sparkles.png" alt=""><span><b>Tissue</b> printed with vegan inks</span></li>
+          <li><img src="img/deco/feather.png" alt=""><span><b>Crinkled paper</b> no plastic filling, no real feathers</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ RETURNS ============ -->
+    <section class="returns" id="returns">
+      <div class="rt-card">
+        <header class="rt-head">
+          <p class="sec-num">04</p>
+          <h2 class="sec-title">Call it <em class="script">off?</em></h2>
+          <p class="rt-sub">You have 30 days to send it back.</p>
+        </header>
+        <ol class="rt-steps">
+          <li><span class="rt-n">i.</span><h3>Write to us</h3><p>Within 30 days of delivery, <a href="contact.html">send us a letter</a> with your order number and what you’d like to return.</p></li>
+          <li><span class="rt-n">ii.</span><h3>Send it back</h3><p>We send you the return address and, in Italy, a free prepaid label. From other countries the return postage is yours.</p></li>
+          <li><span class="rt-n">iii.</span><h3>Get your refund</h3><p>Within 14 days of the parcel reaching us, we refund you on the payment method you used.</p></li>
+        </ol>
+        <ul class="rt-rules">
+          <li><b>Unopened &amp; sealed</b> products can come back for any reason.</li>
+          <li><b>Used makeup</b> can’t come back, for everyone’s hygiene, unless it was faulty.</li>
+          <li><b>Broken or wrong?</b> Send a photo within 14 days and we replace it for free. No need to return it.</li>
+          <li><b>Your legal rights</b> under EU consumer law always apply. Our 30 days are simply longer than the 14 required.</li>
+        </ul>
+        <p class="rt-more">More in our <a href="terms.html#returns">terms</a> and <a href="faq.html#q-return">letters</a>, or <a href="contact.html">ring the angels</a>.</p>
+      </div>
+    </section>
+
+    <!-- ============ SATIN RIBBON ============ -->
+    <section class="ribbon" aria-label="Our promises">
+      <svg viewBox="0 0 1200 220" preserveAspectRatio="none" class="ribbon-svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="satin" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#ffe6ea"/>
+            <stop offset=".45" stop-color="#f5cbd7"/>
+            <stop offset=".55" stop-color="#eeb4c3"/>
+            <stop offset="1" stop-color="#ffdce2"/>
+          </linearGradient>
+          <path id="ribbonPath" d="M-40,120 C150,20 300,200 480,110 S800,20 960,120 S1150,190 1260,90"/>
+        </defs>
+        <use href="#ribbonPath" class="ribbon-band"/>
+        <use href="#ribbonPath" class="ribbon-stitch"/>
+        <text class="ribbon-text"><textPath href="#ribbonPath" id="ribbonText" startOffset="0">
+          never tested on animals ✦ vegan formulas ✦ soft hearts, sharp edges ✦ ribbon tint ✦ fallen lash ✦ pearl dew ✦ never tested on animals ✦ vegan formulas ✦ soft hearts, sharp edges ✦ ribbon tint ✦ fallen lash ✦ pearl dew ✦
+        </textPath></text>
+      </svg>
+    </section>
+
+
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="ft-top">
+      <div class="ft-col">
+        <p class="ft-kicker">from the back cover</p>
+        <p class="ft-quote">“Soft enough to cry in, sharp enough to start a war.”<span>— the moon, probably</span></p>
+        <p class="ft-quote">“I've never seen a halo this glossy.”<span>— a passing cloud</span></p>
+      </div>
+      <div class="ft-col ft-center">
+        <a class="logo logo-md" href="index.html" aria-label="Angeology — home">
+          <img src="img/deco/wing-l.png" alt="" class="logo-wing logo-wing-l">
+          <img src="img/deco/wing-r.png" alt="" class="logo-wing logo-wing-r">
+          <svg class="logo-frame" viewBox="0 0 400 180" aria-hidden="true"><use href="#cartouche"/></svg>
+          <span class="logo-text">
+            <span class="logo-the">the house of</span>
+            <span class="logo-word">Angeology</span>
+            <span class="logo-sub">cruelty free cosmetics</span>
+          </span>
+          <img src="img/deco/bow.png" alt="" class="logo-bow">
+        </a>
+        <p class="ft-promise">No animal was ever harmed to make you pretty.</p>
+      </div>
+      <div class="ft-col">
+        <p class="ft-kicker">index</p>
+        <ul class="ft-links">
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="cruelty-free.html">Cruelty free</a></li>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="shipping.html">Shipping</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="ft-giant" aria-hidden="true">Angeology</p>
+    <div class="ft-bottom">
+      <p>© 2026 Angeology · vegan · cruelty free · never tested on animals</p>
+      <a href="#top" class="text-link">back to the top</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/shipping.js"></script>
+</body>
+  <!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <          *
+-->
+</html>

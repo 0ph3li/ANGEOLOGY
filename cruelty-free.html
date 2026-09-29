@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cruelty free — ANGEOLOGY, never tested on animals</title>
+  <meta name="description" content="The ANGEOLOGY vow: never tested on animals, 100% vegan formulas, synthetic brushes and lashes. Read every clause and check any ingredient.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Montserrat:wght@300;400;500;600&family=Imperial+Script&family=Pinyon+Script&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/cruelty.css">
+</head>
+<body data-loader="short">
+
+  <!-- shared SVG: baroque cartouche for the logo -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#b9bcc6"/>
+        <stop offset=".5" stop-color="#eef0f4"/><stop offset=".7" stop-color="#8e919b"/><stop offset="1" stop-color="#d9dbe1"/>
+      </linearGradient>
+      <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+        <rect width="10" height="10" fill="#fff7fa"/><circle cx="5" cy="5" r="1.3" fill="#ffc9da"/>
+      </pattern>
+      <symbol id="cartouche" viewBox="0 0 400 180">
+        <g fill="none" stroke="url(#silver)" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M72,38 C120,18 160,26 200,20 C240,26 280,18 328,38 C352,46 366,62 372,90 C366,118 352,134 328,142 C280,162 240,154 200,160 C160,154 120,162 72,142 C48,134 34,118 28,90 C34,62 48,46 72,38Z" fill="url(#dots)" stroke-width="6"/>
+          <path d="M78,48 C122,30 162,37 200,32 C238,37 278,30 322,48 C342,56 354,70 359,90 C354,110 342,124 322,132 C278,150 238,143 200,148 C162,143 122,150 78,132 C58,124 46,110 41,90 C46,70 58,56 78,48Z" stroke-width="1.6" stroke="#e7a3bb"/>
+          <path d="M28,90 C14,82 4,66 12,52 C20,40 38,44 36,56 C35,64 26,64 25,58" stroke-width="5"/>
+          <path d="M28,90 C14,98 4,114 12,128 C20,140 38,136 36,124 C35,116 26,116 25,122" stroke-width="5"/>
+          <path d="M372,90 C386,82 396,66 388,52 C380,40 362,44 364,56 C365,64 374,64 375,58" stroke-width="5"/>
+          <path d="M372,90 C386,98 396,114 388,128 C380,140 362,136 364,124 C365,116 374,116 375,122" stroke-width="5"/>
+          <path d="M72,38 C62,22 72,8 88,12 C98,15 96,28 86,27" stroke-width="4"/>
+          <path d="M328,38 C338,22 328,8 312,12 C302,15 304,28 314,27" stroke-width="4"/>
+          <path d="M72,142 C62,158 72,172 88,168 C98,165 96,152 86,153" stroke-width="4"/>
+          <path d="M328,142 C338,158 328,172 312,168 C302,165 304,152 314,153" stroke-width="4"/>
+          <path d="M168,24 C160,8 176,0 186,8 C192,13 188,20 182,18" stroke-width="4"/>
+          <path d="M232,24 C240,8 224,0 214,8 C208,13 212,20 218,18" stroke-width="4"/>
+          <path d="M170,156 C162,172 178,180 188,172 C194,167 190,160 184,162" stroke-width="4"/>
+          <path d="M230,156 C238,172 222,180 212,172 C206,167 210,160 216,162" stroke-width="4"/>
+          <path d="M200,172 C190,164 190,156 196,155 C198,155 200,157 200,159 C200,157 202,155 204,155 C210,156 210,164 200,172Z" fill="#f59ab8" stroke-width="1.5"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ LOADER ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <img class="loader-bow" src="img/deco/bow.png" alt="">
+      <div class="loader-pearls" id="loaderPearls"></div>
+      <p class="loader-word">Angeology</p>
+      <p class="loader-sub"><span id="loaderCount">0</span>% &middot; cruelty free, always</p>
+    </div>
+  </div>
+
+  <!-- ============ NAV: every page, one row, one style ============ -->
+  <header class="topnav" id="topnav">
+    <a class="nav-logo" href="index.html" aria-label="Angeology — home">Angeology</a>
+    <nav aria-label="Main">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="shop.html"><span class="t">Shop</span><span class="s" aria-hidden="true">shop</span></a></li>
+        <li><a href="collections.html"><span class="t">Collections</span><span class="s" aria-hidden="true">collections</span></a></li>
+        <li><a href="lookbook.html"><span class="t">Lookbook</span><span class="s" aria-hidden="true">lookbook</span></a></li>
+        <li><a href="cruelty-free.html" aria-current="page"><span class="t">Cruelty free</span><span class="s" aria-hidden="true">cruelty free</span></a></li>
+        <li><a href="about.html"><span class="t">Our story</span><span class="s" aria-hidden="true">our story</span></a></li>
+        <li><a href="contact.html"><span class="t">Contact</span><span class="s" aria-hidden="true">contact</span></a></li>
+        <li><a href="search.html"><span class="t">Search</span><span class="s" aria-hidden="true">search</span></a></li>
+        <li><a href="account.html"><span class="t">Account</span><span class="s" aria-hidden="true">account</span></a></li>
+        <li><a href="cart.html"><span class="t">Bag (0)</span><span class="s" aria-hidden="true">bag (0)</span></a></li>
+      </ul>
+      <span class="nav-heart" id="navHeart" aria-hidden="true">♡</span>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+  </header>
+
+  <!-- menu overlay (tablet / mobile) -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu-page">
+      <button class="menu-close" id="menuClose">Close</button>
+      <p class="menu-title">Index</p>
+      <ol class="menu-list" id="menuList"></ol>
+      <img src="img/deco/bow.png" alt="" class="menu-bow">
+    </div>
+  </div>
+
+  <main class="cruelty">
+
+    <!-- ============ HERO ============ -->
+    <section class="cf-hero" id="top">
+      <svg class="wave wave-cf" viewBox="0 0 1440 700" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M-20,520 C240,380 440,640 720,500 S1140,260 1460,420"/>
+      </svg>
+      <div class="cf-copy">
+        <p class="sec-num">01</p>
+        <h1 class="cf-title">
+          <span class="hl-in">Never tested</span>
+          <span class="hl-in">on animals.</span>
+          <em class="script hl-in">Ever.</em>
+        </h1>
+        <p class="cf-lede">Not our finished products, not a single ingredient, not by our suppliers, not anywhere in the world. And every formula is vegan, down to the last drop of gloss.</p>
+        <div class="btn-row">
+          <a href="#charter" class="btn btn-fill">Read the vow <span class="arrow"></span></a>
+          <a href="#checker" class="btn btn-line">Check an ingredient <span class="arrow"></span></a>
+        </div>
+      </div>
+      <figure class="cf-visual">
+        <img src="img/deco/wing-l.png" alt="" class="cf-wing cf-wing-l">
+        <img src="img/deco/wing-r.png" alt="" class="cf-wing cf-wing-r">
+        <div class="cf-arch">
+          <div class="slot" data-img="cruelty-hero.jpg" data-alt="A baby goat wearing a pink satin bow, held safely in someone’s arms" data-ratio="3 / 4"><span class="slot-label">img/cruelty-hero.jpg<br><small>3 : 4 — campaign</small></span></div>
+        </div>
+        <div class="cf-stamp"><svg viewBox="0 0 200 200" aria-hidden="true">
+            <defs><path id="cfStamp" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+            <circle cx="100" cy="100" r="94" class="st-ring"/>
+            <circle cx="100" cy="100" r="54" class="st-ring thin"/>
+            <text class="st-text"><textPath href="#cfStamp">never tested on animals ✦ 100% vegan ✦ </textPath></text>
+            <path class="st-heart" d="M100 128 C70 108 68 86 84 80 C93 77 99 83 100 88 C101 83 107 77 116 80 C132 86 130 108 100 128Z"/>
+          </svg></div>
+        <figcaption>friends, never test subjects</figcaption>
+      </figure>
+    </section>
+
+    <!-- ============ NUMBERS ============ -->
+    <section class="cf-numbers" aria-label="Our promise in numbers">
+      <ul>
+        <li><span class="cfn" data-to="0">0</span><span>animals tested on, ever</span></li>
+        <li><span class="cfn" data-to="100">100</span><span>% vegan formulas</span></li>
+        <li><span class="cfn" data-to="12">12</span><span>animal ingredients swapped out</span></li>
+        <li><span class="cfn" data-to="0">0</span><span>real feathers — only pictures</span></li>
+      </ul>
+    </section>
+
+    <!-- ============ THE CHARTER ============ -->
+    <section class="charter-wrap" id="charter">
+      <article class="charter">
+        <span class="tape tape-tl"></span><span class="tape tape-tr"></span>
+        <header class="charter-head">
+          <p class="sec-num">02</p>
+          <h2 class="sec-title">The <em class="script">vow</em></h2>
+          <p class="sec-sub">a charter in seven articles</p>
+        </header>
+        <ol class="articles">
+          <li><span class="art-n">I</span><div><h3>No animal testing. Anywhere.</h3><p>We never test our products or our ingredients on animals, and we never ask anyone else to do it for us — at any stage, from raw material to the finished lipstick.</p></div></li>
+          <li><span class="art-n">II</span><div><h3>Suppliers sign it too.</h3><p>Every supplier signs a declaration each year confirming that nothing they sell us has been tested on animals. No signature, no business.</p></div></li>
+          <li><span class="art-n">III</span><div><h3>We don’t sell where it’s required.</h3><p>If a country’s law requires animal testing to sell makeup there, we simply don’t sell there. Pretty isn’t worth that.</p></div></li>
+          <li><span class="art-n">IV</span><div><h3>Every formula is vegan.</h3><p>No beeswax, carmine, lanolin, honey, silk, shellac, guanine or squalene from sharks. Plants and minerals only.</p></div></li>
+          <li><span class="art-n">V</span><div><h3>Synthetic lashes and brushes.</h3><p>Our lashes are never mink, silk or feathers, and our brushes are made of soft synthetic fibres. Soft as a feather, made of none.</p></div></li>
+          <li><span class="art-n">VI</span><div><h3>The feathers are only pictures.</h3><p>Every wing and feather on this website is an illustration or a photo prop. Angels shed; nobody plucks.</p></div></li>
+          <li><span class="art-n">VII</span><div><h3>Leather-free, always.</h3><p>No leather, suede or animal glue in our packaging, pouches or bows. Our satin is plant-based viscose.</p></div></li>
+        </ol>
+        <footer class="charter-foot">
+          <div class="sign"><span class="sign-name script">the angels</span><span class="sign-line">signed</span></div>
+          <div class="sign"><span class="sign-name">MMXXVI</span><span class="sign-line">dated</span></div>
+          <div class="wax" id="wax" aria-hidden="true"><span>♡</span></div>
+        </footer>
+      </article>
+    </section>
+
+    <!-- ============ SWAPS ============ -->
+    <section class="swaps" id="swaps">
+      <header class="sec-head">
+        <p class="sec-num">03</p>
+        <h2 class="sec-title">What we <em class="script">swapped</em></h2>
+        <p class="sec-sub">animal ingredients, crossed out for good</p>
+      </header>
+      <ul class="swap-list" id="swapList"></ul>
+    </section>
+
+    <!-- ============ INGREDIENT CHECKER ============ -->
+    <section class="checker" id="checker">
+      <div class="checker-card">
+        <p class="sec-num">04</p>
+        <h2 class="sec-title">Check an <em class="script">ingredient</em></h2>
+        <p class="checker-lede">Type anything you’d rather not wear. We’ll tell you if it’s ever in Angeology — and what we use instead.</p>
+        <form class="checker-form" id="checkerForm" autocomplete="off">
+          <label for="ingredient" class="visually-hidden">Ingredient</label>
+          <input type="text" id="ingredient" list="ingredientList" placeholder="e.g. beeswax, carmine, lanolin…">
+          <datalist id="ingredientList"></datalist>
+          <button type="submit" class="btn btn-fill">Check <span class="arrow"></span></button>
+        </form>
+        <div class="checker-result" id="checkerResult" aria-live="polite"></div>
+        <p class="checker-try">try: <button type="button" data-try="beeswax">beeswax</button> <button type="button" data-try="carmine">carmine</button> <button type="button" data-try="mink">mink</button> <button type="button" data-try="squalene">squalene</button></p>
+      </div>
+    </section>
+
+    <!-- ============ HOW WE CHECK ============ -->
+    <section class="process" id="process">
+      <header class="sec-head">
+        <p class="sec-num">05</p>
+        <h2 class="sec-title">How we <em class="script">keep it</em></h2>
+        <p class="sec-sub">the boring part, done properly</p>
+      </header>
+      <div class="timeline">
+        <svg class="tl-line" viewBox="0 0 100 1000" preserveAspectRatio="none" aria-hidden="true"><path id="tlPath" d="M50,0 C90,120 10,250 50,375 S90,620 50,750 S10,900 50,1000"/></svg>
+        <ol>
+          <li><span class="tl-n">01</span><h3>We choose kind ingredients</h3><p>Every raw material is checked against our list of animal-derived ingredients before it reaches the lab.</p></li>
+          <li><span class="tl-n">02</span><h3>Suppliers sign every year</h3><p>A fresh declaration, every year, for every ingredient: never tested on animals, never animal-derived.</p></li>
+          <li><span class="tl-n">03</span><h3>We test on humans who say yes</h3><p>Safety and wear tests are done with in-vitro methods and consenting human volunteers — who get to keep the gloss.</p></li>
+          <li><span class="tl-n">04</span><h3>We say no to some markets</h3><p>Where the law requires animal testing, Angeology isn’t sold. We’d rather be small and kind.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq" id="faq">
+      <header class="sec-head">
+        <p class="sec-num">06</p>
+        <h2 class="sec-title">You <em class="script">asked</em></h2>
+      </header>
+      <div class="faq-list">
+        <details><summary>Are the feathers on your website real?</summary><p>Never. Every feather and wing is an illustration or a photo prop made from synthetic fibres. No bird was involved — not even a pigeon who wandered onto set.</p></details>
+        <details><summary>Is cruelty free the same as vegan?</summary><p>Not quite: cruelty free means nothing was tested on animals; vegan means nothing comes from animals. Angeology is both, every product, every shade.</p></details>
+        <details><summary>What are your lashes made of?</summary><p>Soft synthetic fibres, shaped by hand to look fluttery. Never mink, never silk, never feathers — and reusable up to 20 wears.</p></details>
+        <details><summary>Are your brushes vegan?</summary><p>Yes. Our Wing Brush uses synthetic bristles that are softer than animal hair and easier to clean.</p></details>
+        <details><summary>Do you sell anywhere animal testing is required?</summary><p>No. If a market requires animal testing for cosmetics, we don’t sell there.</p></details>
+        <details><summary>What makes your pinks pink, without carmine?</summary><p>Iron oxides, plant pigments like beetroot and safe synthetic colours. Just as rosy, no insects crushed.</p></details>
+      </div>
+    </section>
+
+    <!-- ============ SIGN THE VOW ============ -->
+    <section class="pledge" id="pledge">
+      <div class="pledge-grid">
+        <div class="pledge-text">
+          <p class="sec-num">07</p>
+          <h2 class="sec-title">Sign <em class="script">the vow</em></h2>
+          <p>Promise to choose kind beauty, and we’ll write you a certificate. It stays on this device, just for you.</p>
+          <form class="pledge-form" id="pledgeForm" autocomplete="off">
+            <label for="pledgeName">your name</label>
+            <div class="lf-row">
+              <input type="text" id="pledgeName" maxlength="28" placeholder="Angel" required>
+              <button type="submit" class="btn btn-fill">I promise <span class="arrow"></span></button>
+            </div>
+          </form>
+        </div>
+        <div class="cert" id="cert" aria-live="polite">
+          <span class="cert-corner c1"></span><span class="cert-corner c2"></span><span class="cert-corner c3"></span><span class="cert-corner c4"></span>
+          <p class="cert-kicker">certificate of kindness</p>
+          <p class="cert-intro">This is to certify that</p>
+          <p class="cert-name" id="certName">your name here</p>
+          <p class="cert-body">has promised to be kind to every creature, to read the label, and to look fabulous doing it.</p>
+          <p class="cert-date" id="certDate"></p>
+          <div class="cert-seal"><svg viewBox="0 0 200 200" aria-hidden="true">
+            <defs><path id="certStamp" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+            <circle cx="100" cy="100" r="94" class="st-ring"/>
+            <circle cx="100" cy="100" r="54" class="st-ring thin"/>
+            <text class="st-text"><textPath href="#certStamp">never tested on animals ✦ 100% vegan ✦ </textPath></text>
+            <path class="st-heart" d="M100 128 C70 108 68 86 84 80 C93 77 99 83 100 88 C101 83 107 77 116 80 C132 86 130 108 100 128Z"/>
+          </svg></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SATIN RIBBON ============ -->
+    <section class="ribbon" aria-label="Our promises">
+      <svg viewBox="0 0 1200 220" preserveAspectRatio="none" class="ribbon-svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="satin" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#ffe6ea"/>
+            <stop offset=".45" stop-color="#f5cbd7"/>
+            <stop offset=".55" stop-color="#eeb4c3"/>
+            <stop offset="1" stop-color="#ffdce2"/>
+          </linearGradient>
+          <path id="ribbonPath" d="M-40,120 C150,20 300,200 480,110 S800,20 960,120 S1150,190 1260,90"/>
+        </defs>
+        <use href="#ribbonPath" class="ribbon-band"/>
+        <use href="#ribbonPath" class="ribbon-stitch"/>
+        <text class="ribbon-text"><textPath href="#ribbonPath" id="ribbonText" startOffset="0">
+          never tested on animals ✦ vegan formulas ✦ soft hearts, sharp edges ✦ ribbon tint ✦ fallen lash ✦ pearl dew ✦ never tested on animals ✦ vegan formulas ✦ soft hearts, sharp edges ✦ ribbon tint ✦ fallen lash ✦ pearl dew ✦
+        </textPath></text>
+      </svg>
+    </section>
+
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="ft-top">
+      <div class="ft-col">
+        <p class="ft-kicker">from the back cover</p>
+        <p class="ft-quote">“Soft enough to cry in, sharp enough to start a war.”<span>— the moon, probably</span></p>
+        <p class="ft-quote">“I've never seen a halo this glossy.”<span>— a passing cloud</span></p>
+      </div>
+      <div class="ft-col ft-center">
+        <a class="logo logo-md" href="index.html" aria-label="Angeology — home">
+          <img src="img/deco/wing-l.png" alt="" class="logo-wing logo-wing-l">
+          <img src="img/deco/wing-r.png" alt="" class="logo-wing logo-wing-r">
+          <svg class="logo-frame" viewBox="0 0 400 180" aria-hidden="true"><use href="#cartouche"/></svg>
+          <span class="logo-text">
+            <span class="logo-the">the house of</span>
+            <span class="logo-word">Angeology</span>
+            <span class="logo-sub">cruelty free cosmetics</span>
+          </span>
+          <img src="img/deco/bow.png" alt="" class="logo-bow">
+        </a>
+        <p class="ft-promise">No animal was ever harmed to make you pretty.</p>
+      </div>
+      <div class="ft-col">
+        <p class="ft-kicker">index</p>
+        <ul class="ft-links">
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="cruelty-free.html">Cruelty free</a></li>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="shipping.html">Shipping</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="ft-giant" aria-hidden="true">Angeology</p>
+    <div class="ft-bottom">
+      <p>© 2026 Angeology · vegan · cruelty free · never tested on animals</p>
+      <a href="#top" class="text-link">back to the top</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cruelty.js"></script>
+</body>
+  <!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <          *
+-->
+</html>

@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ANGEOLOGY — cruelty free cosmetics for fallen angels</title>
+  <meta name="description" content="ANGEOLOGY: vegan, cruelty free makeup for soft hearts with sharp edges. Never tested on animals.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Montserrat:wght@300;400;500;600&family=Imperial+Script&family=Pinyon+Script&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- shared SVG: baroque cartouche for the logo -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#b9bcc6"/>
+        <stop offset=".5" stop-color="#eef0f4"/><stop offset=".7" stop-color="#8e919b"/><stop offset="1" stop-color="#d9dbe1"/>
+      </linearGradient>
+      <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+        <rect width="10" height="10" fill="#fff7fa"/><circle cx="5" cy="5" r="1.3" fill="#ffc9da"/>
+      </pattern>
+      <symbol id="cartouche" viewBox="0 0 400 180">
+        <g fill="none" stroke="url(#silver)" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M72,38 C120,18 160,26 200,20 C240,26 280,18 328,38 C352,46 366,62 372,90 C366,118 352,134 328,142 C280,162 240,154 200,160 C160,154 120,162 72,142 C48,134 34,118 28,90 C34,62 48,46 72,38Z" fill="url(#dots)" stroke-width="6"/>
+          <path d="M78,48 C122,30 162,37 200,32 C238,37 278,30 322,48 C342,56 354,70 359,90 C354,110 342,124 322,132 C278,150 238,143 200,148 C162,143 122,150 78,132 C58,124 46,110 41,90 C46,70 58,56 78,48Z" stroke-width="1.6" stroke="#e7a3bb"/>
+          <path d="M28,90 C14,82 4,66 12,52 C20,40 38,44 36,56 C35,64 26,64 25,58" stroke-width="5"/>
+          <path d="M28,90 C14,98 4,114 12,128 C20,140 38,136 36,124 C35,116 26,116 25,122" stroke-width="5"/>
+          <path d="M372,90 C386,82 396,66 388,52 C380,40 362,44 364,56 C365,64 374,64 375,58" stroke-width="5"/>
+          <path d="M372,90 C386,98 396,114 388,128 C380,140 362,136 364,124 C365,116 374,116 375,122" stroke-width="5"/>
+          <path d="M72,38 C62,22 72,8 88,12 C98,15 96,28 86,27" stroke-width="4"/>
+          <path d="M328,38 C338,22 328,8 312,12 C302,15 304,28 314,27" stroke-width="4"/>
+          <path d="M72,142 C62,158 72,172 88,168 C98,165 96,152 86,153" stroke-width="4"/>
+          <path d="M328,142 C338,158 328,172 312,168 C302,165 304,152 314,153" stroke-width="4"/>
+          <path d="M168,24 C160,8 176,0 186,8 C192,13 188,20 182,18" stroke-width="4"/>
+          <path d="M232,24 C240,8 224,0 214,8 C208,13 212,20 218,18" stroke-width="4"/>
+          <path d="M170,156 C162,172 178,180 188,172 C194,167 190,160 184,162" stroke-width="4"/>
+          <path d="M230,156 C238,172 222,180 212,172 C206,167 210,160 216,162" stroke-width="4"/>
+          <path d="M200,172 C190,164 190,156 196,155 C198,155 200,157 200,159 C200,157 202,155 204,155 C210,156 210,164 200,172Z" fill="#f59ab8" stroke-width="1.5"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ LOADER ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <img class="loader-bow" src="img/deco/bow.png" alt="">
+      <div class="loader-pearls" id="loaderPearls"></div>
+      <p class="loader-word">Angeology</p>
+      <p class="loader-sub"><span id="loaderCount">0</span>% &middot; cruelty free, always</p>
+    </div>
+  </div>
+
+  <!-- ============ NAV: every page, one row, one style ============ -->
+  <header class="topnav" id="topnav">
+    <a class="nav-logo" href="index.html" aria-label="Angeology — home">Angeology</a>
+    <nav aria-label="Main">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="shop.html"><span class="t">Shop</span><span class="s" aria-hidden="true">shop</span></a></li>
+        <li><a href="collections.html"><span class="t">Collections</span><span class="s" aria-hidden="true">collections</span></a></li>
+        <li><a href="lookbook.html"><span class="t">Lookbook</span><span class="s" aria-hidden="true">lookbook</span></a></li>
+        <li><a href="cruelty-free.html"><span class="t">Cruelty free</span><span class="s" aria-hidden="true">cruelty free</span></a></li>
+        <li><a href="about.html"><span class="t">Our story</span><span class="s" aria-hidden="true">our story</span></a></li>
+        <li><a href="contact.html"><span class="t">Contact</span><span class="s" aria-hidden="true">contact</span></a></li>
+        <li><a href="search.html"><span class="t">Search</span><span class="s" aria-hidden="true">search</span></a></li>
+        <li><a href="account.html"><span class="t">Account</span><span class="s" aria-hidden="true">account</span></a></li>
+        <li><a href="cart.html"><span class="t">Bag (0)</span><span class="s" aria-hidden="true">bag (0)</span></a></li>
+      </ul>
+      <span class="nav-heart" id="navHeart" aria-hidden="true">♡</span>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+  </header>
+
+  <!-- menu overlay (tablet / mobile) -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu-page">
+      <button class="menu-close" id="menuClose">Close</button>
+      <p class="menu-title">Index</p>
+      <ol class="menu-list" id="menuList"></ol>
+      <img src="img/deco/bow.png" alt="" class="menu-bow">
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ============ HERO — magazine cover × collage ============ -->
+    <section class="hero" id="top">
+      <svg class="wave wave-hero" viewBox="0 0 1440 700" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M-20,520 C220,380 380,660 640,520 S1040,260 1180,400 S1380,640 1460,420"/>
+        <path d="M-20,180 C260,60 420,300 700,200 S1100,40 1460,160"/>
+      </svg>
+
+      <div class="hero-logo">
+        <a class="logo logo-lg" href="index.html" aria-label="Angeology — home">
+          <img src="img/deco/wing-l.png" alt="" class="logo-wing logo-wing-l">
+          <img src="img/deco/wing-r.png" alt="" class="logo-wing logo-wing-r">
+          <svg class="logo-frame" viewBox="0 0 400 180" aria-hidden="true"><use href="#cartouche"/></svg>
+          <span class="logo-text">
+            <span class="logo-the">the house of</span>
+            <span class="logo-word">Angeology</span>
+            <span class="logo-sub">cruelty free cosmetics</span>
+          </span>
+          <img src="img/deco/bow.png" alt="" class="logo-bow">
+          <img src="img/deco/sparkle.png" alt="" class="logo-spark logo-spark-1">
+          <img src="img/deco/sparkle.png" alt="" class="logo-spark logo-spark-2">
+        </a>
+      </div>
+
+      <h1 class="headline">
+        <span class="hl-row"><span class="hl-mask"><span class="hl-in">Makeup</span></span>
+          <span class="pill pill-1"><span class="slot" data-img="hero-pill-1.jpg" data-alt="Pink-haired model touching her glossy lips"><span class="slot-label">hero-pill-1.jpg</span></span></span>
+          <span class="hl-mask"><span class="hl-in"><i>for</i></span></span></span>
+        <span class="hl-row"><span class="hl-mask"><span class="hl-in script">fallen</span></span>
+          <span class="hl-mask"><span class="hl-in">angels</span></span>
+          <span class="pill pill-2"><span class="slot" data-img="hero-pill-2.jpg" data-alt="Model holding an apple tied with a pearl bow"><span class="slot-label">hero-pill-2.jpg</span></span></span></span>
+      </h1>
+
+      <div class="hero-collage">
+        <div class="hc-left">
+          <figure class="polaroid pol-a">
+            <span class="tape tape-tl"></span>
+            <div class="slot" data-img="hero-2.jpg" data-alt="Model blowing a kiss, pink bows in her hair and sheer pink gloves" data-ratio="1 / 1"><span class="slot-label">img/hero-2.jpg<br><small>1 : 1 — polaroid</small></span></div>
+            <figcaption>mwah, ss26</figcaption>
+          </figure>
+          <div class="hero-note">
+            <p class="kicker"><b>N°01</b> the manifesto</p>
+            <p>Soft hearts, sharp edges. Makeup that is 100% vegan, always cruelty free and never, ever tested on animals.</p>
+            <div class="btn-row">
+              <a href="shop.html" class="btn btn-fill">Shop now <span class="arrow"></span></a>
+              <a href="#vow" class="btn btn-line">Our vow <span class="arrow"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <figure class="arch-wrap">
+          <img src="img/deco/wing-l.png" alt="" class="arch-wing arch-wing-l">
+          <img src="img/deco/wing-r.png" alt="" class="arch-wing arch-wing-r">
+          <div class="arch">
+            <div class="slot" data-img="hero.jpg" data-alt="Model with pink bows down her hair holding a pink tint" data-ratio="3 / 4"><span class="slot-label">img/hero.jpg<br><small>3 : 4 — campaign portrait</small></span></div>
+          </div>
+          <img src="img/deco/bow.png" alt="" class="arch-bow">
+          <figcaption class="arch-cap">campaign ss26 · <i>bows &amp; blush</i></figcaption>
+        </figure>
+
+        <div class="hc-right">
+          <article class="dear-card">
+            <span class="tape tape-tr"></span>
+            <p class="dear-title">Dear angel,</p>
+            <p class="dear-line"><span>to</span> you, obviously</p>
+            <p class="dear-line"><span>from</span> Angeology</p>
+            <p class="dear-line"><span>subject</span> a gift, tied in satin</p>
+            <p class="dear-msg">Ribbon Tint is here — a lip &amp; cheek duo wrapped in a bow. Plant-based, beeswax-free, wear it to heaven and back.</p>
+            <a href="shop.html#lips" class="btn btn-line">Meet Ribbon Tint <span class="arrow"></span></a>
+          </article>
+          <div class="mini-product">
+            <div class="mp-img"><div class="slot cutout" data-img="product-1.webp" data-alt="Ribbon Tint lip and cheek duo tied with a satin bow" data-ratio="1 / 1"><span class="slot-label">product-1</span></div></div>
+            <div>
+              <p class="mp-name">Ribbon Tint</p>
+              <p class="mp-meta">new · € 22</p>
+            </div>
+            <img src="img/deco/sparkle.png" alt="" class="mp-spark">
+          </div>
+        </div>
+      </div>
+
+      <div class="feathers" id="feathers" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ SATIN RIBBON ============ -->
+    <section class="ribbon" aria-label="Our promises">
+      <svg viewBox="0 0 1200 220" preserveAspectRatio="none" class="ribbon-svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="satin" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#ffe6ea"/>
+            <stop offset=".45" stop-color="#f5cbd7"/>
+            <stop offset=".55" stop-color="#eeb4c3"/>
+            <stop offset="1" stop-color="#ffdce2"/>
+          </linearGradient>
+          <path id="ribbonPath" d="M-40,120 C150,20 300,200 480,110 S800,20 960,120 S1150,190 1260,90"/>
+        </defs>
+        <use href="#ribbonPath" class="ribbon-band"/>
+        <use href="#ribbonPath" class="ribbon-stitch"/>
+        <text class="ribbon-text"><textPath href="#ribbonPath" id="ribbonText" startOffset="0">
+          never tested on animals ✦ vegan formulas ✦ soft hearts, sharp edges ✦ ribbon tint ✦ fallen lash ✦ pearl dew ✦ never tested on animals ✦ vegan formulas ✦ soft hearts, sharp edges ✦ ribbon tint ✦ fallen lash ✦ pearl dew ✦
+        </textPath></text>
+      </svg>
+    </section>
+
+    <!-- ============ 02 — THE VOW ============ -->
+    <section class="vow" id="vow">
+      <header class="sec-head">
+        <p class="sec-num">02</p>
+        <h2 class="sec-title">The <em class="script">vow</em></h2>
+        <p class="sec-sub">our cruelty free promise, in writing</p>
+      </header>
+
+      <div class="vow-grid">
+        <ul class="stats">
+          <li><span class="stat-n" data-count="0">0</span><span class="stat-l">animals ever harmed<br>or tested on</span></li>
+          <li><span class="stat-n" data-count="100">100<small>%</small></span><span class="stat-l">vegan formulas,<br>every single one</span></li>
+          <li><span class="stat-n" data-count="0">0</span><span class="stat-l">beeswax, carmine<br>or lanolin</span></li>
+        </ul>
+
+        <article class="letter reveal">
+          <span class="tape tape-tl"></span><span class="tape tape-br"></span>
+          <p class="letter-row"><span>To:</span> every angel</p>
+          <p class="letter-row"><span>From:</span> Angeology</p>
+          <p class="letter-row"><span>Subject:</span> <em class="script">we solemnly swear</em></p>
+          <ul class="letter-list">
+            <li>never to test on animals — not us, not our suppliers, not anywhere.</li>
+            <li>every formula is vegan: no beeswax, no carmine, no lanolin.</li>
+            <li>our lashes are never mink, silk or feathers. Our brushes are synthetic.</li>
+            <li>the feathers you see here are only pictures. Angels shed, nobody plucks.</li>
+            <li>leather-free packaging, always.</li>
+          </ul>
+          <div class="letter-foot">
+            <p class="letter-sign script">the angels</p>
+            <a href="cruelty-free.html" class="btn btn-fill">Read the full promise <span class="arrow"></span></a>
+          </div>
+        </article>
+
+        <div class="stamp" id="stamp" aria-hidden="true">
+          <svg viewBox="0 0 200 200">
+            <defs><path id="stampCircle" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+            <circle cx="100" cy="100" r="94" class="st-ring"/>
+            <circle cx="100" cy="100" r="54" class="st-ring thin"/>
+            <text class="st-text"><textPath href="#stampCircle">never tested on animals ✦ 100% vegan ✦ </textPath></text>
+            <path class="st-heart" d="M100 128 C70 108 68 86 84 80 C93 77 99 83 100 88 C101 83 107 77 116 80 C132 86 130 108 100 128Z"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 — DEFINITION ============ -->
+    <section class="entry" id="about">
+      <figure class="cameo">
+        <div class="frame-arch">
+          <div class="slot" data-img="cameo.jpg" data-alt="Model in a white tutu and faux angel wings on a pink backdrop" data-ratio="3 / 4"><span class="slot-label">img/cameo.jpg<br><small>3 : 4</small></span></div>
+        </div>
+        <img src="img/deco/pin.png" alt="" class="cameo-pin">
+        <figcaption>our muse, wings on (faux, of course)</figcaption>
+      </figure>
+      <div class="entry-text">
+        <p class="sec-num">03</p>
+        <h2 class="headword">an·ge·ol·o·gy</h2>
+        <p class="pron">/ an · jee · OL · uh · jee / &nbsp;<i>noun</i></p>
+        <ol class="defs">
+          <li data-split>the study of angels: their wings, their halos and the way they look at you.</li>
+          <li data-split>a makeup house for dolls who wear lace <em>and</em> bullet belts. Pink on the outside, a little bit gothic underneath.</li>
+          <li data-split><i>informal</i> — the art of looking like you fell from heaven on purpose.</li>
+        </ol>
+        <p class="entry-see">see also — <a href="about.html" class="text-link">our story</a>, <a href="cruelty-free.html" class="text-link">the vow</a></p>
+      </div>
+    </section>
+
+    <!-- ============ 04 — BESTSELLERS IN ORBIT ============ -->
+    <section class="orbit" id="products">
+      <header class="sec-head">
+        <p class="sec-num">04</p>
+        <h2 class="sec-title">Bestsellers <em class="script">in orbit</em></h2>
+        <p class="sec-sub">tap a product to bring it into the halo</p>
+      </header>
+
+      <div class="orbit-grid">
+        <div class="orbit-stage" id="orbitStage">
+          <svg class="orbit-ring" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <ellipse cx="50" cy="50" rx="46" ry="38"/>
+            <ellipse cx="50" cy="50" rx="43" ry="35" class="thin"/>
+          </svg>
+          <div class="orbit-core">
+            <svg class="core-halo" viewBox="0 0 200 40" aria-hidden="true"><ellipse cx="100" cy="20" rx="70" ry="12"/></svg>
+            <div class="core-circle">
+              <div class="slot cutout" id="coreSlot" data-img="product-1.webp" data-ratio="1 / 1"><span class="slot-label">img/product-1.webp</span></div>
+            </div>
+          </div>
+        </div>
+
+        <article class="orbit-info" id="orbitInfo" aria-live="polite">
+          <p class="oi-num">n° 01 / 06</p>
+          <h3 class="oi-name">Ribbon Tint</h3>
+          <p class="oi-latin">Taenia labialis</p>
+          <p class="oi-desc">A lip &amp; cheek duo tied up in satin: one sheer berry balm, one cooling highlight stick. Plant-based, beeswax-free.</p>
+          <p class="oi-badges"><span>vegan</span><span>cruelty free</span><span>never tested on animals</span></p>
+          <div class="oi-shades" role="group" aria-label="Shades"></div>
+          <p class="oi-shade-name" aria-live="polite"></p>
+          <div class="oi-row">
+            <span class="oi-price">€ 22</span>
+            <a href="cart.html" class="btn btn-fill">Add to bag <span class="arrow"></span></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 05 — SHADES (staggered swatches) ============ -->
+    <section class="shades" id="shades">
+      <div class="sw-grid">
+        <div class="sw-block sw-b1">
+          <span class="sw" style="--img:url(../img/palette-01.jpg);--c1:#fff3ea;--c2:#f6dccc"><i>1</i></span>
+          <span class="sw" style="--img:url(../img/palette-02.jpg);--c1:#f3dcd0;--c2:#e2bfae"><i>2</i></span>
+          <span class="sw" style="--img:url(../img/palette-03.jpg);--c1:#ffd7db;--c2:#f3b3bf"><i>3</i></span>
+          <span class="sw" style="--img:url(../img/palette-04.jpg);--c1:#ecd3de;--c2:#d9b4c4"><i>4</i></span>
+        </div>
+        <ol class="sw-names sw-n1" start="1">
+          <li>Clean Halo</li><li>Almond Milk</li><li>Blush Petal</li><li>Vintage Lilac</li>
+        </ol>
+        <div class="sw-block sw-b2">
+          <span class="sw sw-shimmer" style="--img:url(../img/palette-05.jpg);--c1:#fbf1e6;--c2:#e9d6c4"><i>5</i></span>
+          <span class="sw sw-shimmer" style="--img:url(../img/palette-06.jpg);--c1:#fbd9d6;--c2:#eab0ae"><i>6</i></span>
+          <span class="sw sw-shimmer" style="--img:url(../img/palette-07.jpg);--c1:#f7d3e6;--c2:#dfa9c9"><i>7</i></span>
+          <span class="sw sw-shimmer" style="--img:url(../img/palette-08.jpg);--c1:#fbe0d3;--c2:#eab99f"><i>8</i></span>
+        </div>
+        <ol class="sw-names sw-n2" start="5">
+          <li>Pearl Dew</li><li>Sugarcoat</li><li>Seraph</li><li>Afterglow</li>
+        </ol>
+        <div class="sw-block sw-b3">
+          <span class="sw" style="--img:url(../img/palette-09.jpg);--c1:#f6c3d2;--c2:#e18498"><i>9</i></span>
+          <span class="sw" style="--img:url(../img/palette-10.jpg);--c1:#e6c9d9;--c2:#b98ea6"><i>10</i></span>
+          <span class="sw" style="--img:url(../img/palette-11.jpg);--c1:#6e3b4a;--c2:#402e2a"><i>11</i></span>
+          <span class="sw" style="--img:url(../img/palette-12.jpg);--c1:#3a3336;--c2:#070d0d"><i>12</i></span>
+        </div>
+        <ol class="sw-names sw-n3" start="9">
+          <li>Pink Attention</li><li>Violet Vow</li><li>Sin &amp; Satin</li><li>Fallen</li>
+        </ol>
+        <div class="sw-title">
+          <p class="sec-num">05</p>
+          <h2><em class="script">Pearl</em> Palette</h2>
+          <p class="sec-sub">four mattes, four shimmers, four glitters · 100% vegan</p>
+          <a href="shop.html#eyes" class="btn btn-line">Shop the palette <span class="arrow"></span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06 — TAROT ============ -->
+    <section class="arcana" id="collections">
+      <header class="sec-head">
+        <p class="sec-num">06</p>
+        <h2 class="sec-title">Pick <em class="script">a card</em></h2>
+        <p class="sec-sub">each collection is a fortune — tap a card to turn it</p>
+      </header>
+
+      <div class="deck" id="deck">
+        <div class="card" data-card tabindex="0" role="button" aria-pressed="false">
+          <span class="card-inner">
+            <span class="card-front">
+              <span class="card-num">0</span>
+              <span class="card-art"><span class="slot" data-img="card-doll.jpg" data-alt="Model tangled in pink satin ribbons with blushed lids" data-ratio="2 / 3"><span class="slot-label">img/card-doll.jpg<br><small>2 : 3</small></span></span></span>
+              <span class="card-name">The Doll</span>
+            </span>
+            <span class="card-back">
+              <img src="img/deco/bow.png" alt="">
+              <span class="card-title">The Doll</span>
+              <span class="card-desc">satin ribbons, blushed lids and a glass-skin glow.</span>
+              <a href="collections.html" class="text-link">view collection</a>
+            </span>
+          </span>
+        </div>
+        <div class="card" data-card tabindex="0" role="button" aria-pressed="false">
+          <span class="card-inner">
+            <span class="card-front">
+              <span class="card-num">I</span>
+              <span class="card-art"><span class="slot" data-img="card-fallen.jpg" data-alt="Model with black bows in her hair and white-lined eyes" data-ratio="2 / 3"><span class="slot-label">img/card-fallen.jpg<br><small>2 : 3</small></span></span></span>
+              <span class="card-name">The Fallen</span>
+            </span>
+            <span class="card-back">
+              <img src="img/deco/wings.png" alt="">
+              <span class="card-title">The Fallen</span>
+              <span class="card-desc">black bows, white-lined eyes, a halo slightly crooked.</span>
+              <a href="collections.html" class="text-link">view collection</a>
+            </span>
+          </span>
+        </div>
+        <div class="card" data-card tabindex="0" role="button" aria-pressed="false">
+          <span class="card-inner">
+            <span class="card-front">
+              <span class="card-num">II</span>
+              <span class="card-art"><span class="slot" data-img="card-bride.jpg" data-alt="Model with frosted white eyeshadow and pearls" data-ratio="2 / 3"><span class="slot-label">img/card-bride.jpg<br><small>2 : 3</small></span></span></span>
+              <span class="card-name">The Bride</span>
+            </span>
+            <span class="card-back">
+              <img src="img/deco/pearl.png" alt="">
+              <span class="card-title">The Bride</span>
+              <span class="card-desc">frosted lids, pearls and dewy skin — a vow in every shade.</span>
+              <a href="collections.html" class="text-link">view collection</a>
+            </span>
+          </span>
+        </div>
+        <div class="card" data-card tabindex="0" role="button" aria-pressed="false">
+          <span class="card-inner">
+            <span class="card-front">
+              <span class="card-num">III</span>
+              <span class="card-art"><span class="slot" data-img="card-bunny.jpg" data-alt="Model with flushed cheeks and glossy lips" data-ratio="2 / 3"><span class="slot-label">img/card-bunny.jpg<br><small>2 : 3</small></span></span></span>
+              <span class="card-name">The Bunny</span>
+            </span>
+            <span class="card-back">
+              <img src="img/deco/sparkles.png" alt="">
+              <span class="card-title">The Bunny</span>
+              <span class="card-desc">flushed cheeks, glossy lips and a promise: no animal ever harmed.</span>
+              <a href="collections.html" class="text-link">view collection</a>
+            </span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 07 — SWEET / SOUR ============ -->
+    <section class="duality" id="looks">
+      <div class="duality-grid">
+        <header class="duality-head">
+          <p class="sec-num">07</p>
+          <h2 class="sec-title"><em class="script">Sweet</em><br>&amp; <span class="goth">Sour</span></h2>
+          <p class="sec-sub">drag the bow — same products, two moods</p>
+          <dl class="duality-notes">
+            <dt class="script">Sweet</dt><dd>Seraph Blush, Ribbon Tint, Pearl Dew</dd>
+            <dt class="goth">Sour</dt><dd>Wingtip Liner, Sin &amp; Satin, Fallen Lash</dd>
+          </dl>
+        </header>
+        <div class="compare" id="compare" style="--pos:50%">
+          <div class="cmp cmp-sour">
+            <div class="slot slot-dark" data-img="look-sour.webp" data-alt="Alt look: sharp brows, smoky lids and bold blush"><span class="slot-label">img/look-sour.jpg<br><small>4 : 5 — alt look</small></span></div>
+          </div>
+          <div class="cmp cmp-sweet">
+            <div class="slot" data-img="look-sweet.webp" data-alt="Coquette look: soft blush and glossy lips"><span class="slot-label">img/look-sweet.jpg<br><small>4 : 5 — coquette look</small></span></div>
+          </div>
+          <div class="cmp-handle" aria-hidden="true"><img src="img/deco/bow.png" alt=""></div>
+          <input type="range" min="0" max="100" value="50" class="cmp-range" id="cmpRange" aria-label="Compare sweet and sour looks">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 08 — PORTRAITS ============ -->
+    <section class="portraits" id="lookbook">
+      <header class="sec-head sec-head-light">
+        <p class="sec-num">08</p>
+        <h2 class="sec-title">Black <em class="script">&amp; white lies</em></h2>
+        <p class="sec-sub">portraits from the lookbook</p>
+      </header>
+      <div class="pgrid">
+        <figure class="pf pf-1" data-speed="-8"><span class="tape tape-tl"></span><div class="slot slot-dark" data-img="look-1.jpg" data-alt="Close-up of lilac shadow and spiky lashes" data-ratio="3 / 4"><span class="slot-label">img/look-1.jpg<br><small>3 : 4</small></span></div><figcaption>fig. 11 — the lashes</figcaption></figure>
+        <figure class="pf pf-2" data-speed="10"><div class="slot slot-dark" data-img="look-2.jpg" data-alt="Blonde model with teal liner, hands on her face" data-ratio="4 / 5"><span class="slot-label">img/look-2.jpg<br><small>4 : 5</small></span></div><figcaption>fig. 12 — the doll gaze</figcaption></figure>
+        <figure class="pf pf-3" data-speed="-4"><span class="tape tape-tr"></span><div class="slot slot-dark" data-img="look-3.jpg" data-alt="Close-up of glossy nude lips and soft winged liner" data-ratio="1 / 1"><span class="slot-label">img/look-3.jpg<br><small>1 : 1</small></span></div><figcaption>fig. 13 — the lips</figcaption></figure>
+        <p class="pquote"><em class="script">“be the angel</em><span>they warned you about”</span></p>
+        <figure class="pf pf-4" data-speed="12"><div class="slot slot-dark" data-img="look-4.jpg" data-alt="Model with a pink bow headband being styled" data-ratio="2 / 3"><span class="slot-label">img/look-4.jpg<br><small>2 : 3</small></span></div><figcaption>fig. 14 — the bow</figcaption></figure>
+        <figure class="pf pf-5" data-speed="-6"><span class="tape tape-tl"></span><div class="slot slot-dark" data-img="afterglow-wide.jpg" data-alt="Close-up of powder-blue lids, doll blush and a glossy nude lip" data-ratio="16 / 10"><span class="slot-label">img/afterglow-wide.jpg<br><small>16 : 10</small></span></div><figcaption>fig. 15 — the afterglow</figcaption></figure>
+      </div>
+      <p class="center"><a href="lookbook.html" class="btn btn-light">See the full lookbook <span class="arrow"></span></a></p>
+    </section>
+
+    <!-- ============ 09 — LETTERS ============ -->
+    <section class="letters" id="letters">
+      <div class="env-wrap" id="envWrap">
+        <img src="img/deco/wing-l.png" alt="" class="env-wing env-wing-l">
+        <img src="img/deco/envelope.png" alt="" class="env">
+        <img src="img/deco/wing-r.png" alt="" class="env-wing env-wing-r">
+        <img src="img/deco/bow.png" alt="" class="env-bow">
+      </div>
+      <div class="letters-text">
+        <p class="sec-num">09</p>
+        <h2 class="sec-title">Letters <em class="script">from heaven</em></h2>
+        <p class="letters-copy">Drops, restocks and secret shades, delivered by very small wings. No spam — angels hate spam.</p>
+        <form class="letter-form" id="letterForm" novalidate>
+          <label for="email">your email</label>
+          <div class="lf-row">
+            <input type="email" id="email" name="email" placeholder="angel@heaven.com" required>
+            <button type="submit" class="btn btn-fill">Send <span class="arrow"></span></button>
+          </div>
+          <p class="lf-msg" id="letterMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="ft-top">
+      <div class="ft-col">
+        <p class="ft-kicker">from the back cover</p>
+        <p class="ft-quote">“Soft enough to cry in, sharp enough to start a war.”<span>— the moon, probably</span></p>
+        <p class="ft-quote">“I've never seen a halo this glossy.”<span>— a passing cloud</span></p>
+      </div>
+      <div class="ft-col ft-center">
+        <a class="logo logo-md" href="index.html" aria-label="Angeology — home">
+          <img src="img/deco/wing-l.png" alt="" class="logo-wing logo-wing-l">
+          <img src="img/deco/wing-r.png" alt="" class="logo-wing logo-wing-r">
+          <svg class="logo-frame" viewBox="0 0 400 180" aria-hidden="true"><use href="#cartouche"/></svg>
+          <span class="logo-text">
+            <span class="logo-the">the house of</span>
+            <span class="logo-word">Angeology</span>
+            <span class="logo-sub">cruelty free cosmetics</span>
+          </span>
+          <img src="img/deco/bow.png" alt="" class="logo-bow">
+        </a>
+        <p class="ft-promise">No animal was ever harmed to make you pretty.</p>
+      </div>
+      <div class="ft-col">
+        <p class="ft-kicker">index</p>
+        <ul class="ft-links">
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="cruelty-free.html">Cruelty free</a></li>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="shipping.html">Shipping</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="ft-giant" aria-hidden="true">Angeology</p>
+    <div class="ft-bottom">
+      <p>© 2026 Angeology · vegan · cruelty free · never tested on animals</p>
+      <a href="#top" class="text-link">back to the top</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/home.js"></script>
+</body>
+  <!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <          *
+-->
+</html>

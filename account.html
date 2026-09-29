@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Angel club — ANGEOLOGY cruelty free cosmetics</title>
+  <meta name="description" content="The ANGEOLOGY Angel club: your wishlist, bag, vow and tarot card in one place.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Montserrat:wght@300;400;500;600&family=Imperial+Script&family=Pinyon+Script&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/account.css">
+</head>
+<body data-loader="short">
+
+  <!-- shared SVG: baroque cartouche for the logo -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#b9bcc6"/>
+        <stop offset=".5" stop-color="#eef0f4"/><stop offset=".7" stop-color="#8e919b"/><stop offset="1" stop-color="#d9dbe1"/>
+      </linearGradient>
+      <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+        <rect width="10" height="10" fill="#fff7fa"/><circle cx="5" cy="5" r="1.3" fill="#ffc9da"/>
+      </pattern>
+      <symbol id="cartouche" viewBox="0 0 400 180">
+        <g fill="none" stroke="url(#silver)" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M72,38 C120,18 160,26 200,20 C240,26 280,18 328,38 C352,46 366,62 372,90 C366,118 352,134 328,142 C280,162 240,154 200,160 C160,154 120,162 72,142 C48,134 34,118 28,90 C34,62 48,46 72,38Z" fill="url(#dots)" stroke-width="6"/>
+          <path d="M78,48 C122,30 162,37 200,32 C238,37 278,30 322,48 C342,56 354,70 359,90 C354,110 342,124 322,132 C278,150 238,143 200,148 C162,143 122,150 78,132 C58,124 46,110 41,90 C46,70 58,56 78,48Z" stroke-width="1.6" stroke="#e7a3bb"/>
+          <path d="M28,90 C14,82 4,66 12,52 C20,40 38,44 36,56 C35,64 26,64 25,58" stroke-width="5"/>
+          <path d="M28,90 C14,98 4,114 12,128 C20,140 38,136 36,124 C35,116 26,116 25,122" stroke-width="5"/>
+          <path d="M372,90 C386,82 396,66 388,52 C380,40 362,44 364,56 C365,64 374,64 375,58" stroke-width="5"/>
+          <path d="M372,90 C386,98 396,114 388,128 C380,140 362,136 364,124 C365,116 374,116 375,122" stroke-width="5"/>
+          <path d="M72,38 C62,22 72,8 88,12 C98,15 96,28 86,27" stroke-width="4"/>
+          <path d="M328,38 C338,22 328,8 312,12 C302,15 304,28 314,27" stroke-width="4"/>
+          <path d="M72,142 C62,158 72,172 88,168 C98,165 96,152 86,153" stroke-width="4"/>
+          <path d="M328,142 C338,158 328,172 312,168 C302,165 304,152 314,153" stroke-width="4"/>
+          <path d="M168,24 C160,8 176,0 186,8 C192,13 188,20 182,18" stroke-width="4"/>
+          <path d="M232,24 C240,8 224,0 214,8 C208,13 212,20 218,18" stroke-width="4"/>
+          <path d="M170,156 C162,172 178,180 188,172 C194,167 190,160 184,162" stroke-width="4"/>
+          <path d="M230,156 C238,172 222,180 212,172 C206,167 210,160 216,162" stroke-width="4"/>
+          <path d="M200,172 C190,164 190,156 196,155 C198,155 200,157 200,159 C200,157 202,155 204,155 C210,156 210,164 200,172Z" fill="#f59ab8" stroke-width="1.5"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ LOADER ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <img class="loader-bow" src="img/deco/bow.png" alt="">
+      <div class="loader-pearls" id="loaderPearls"></div>
+      <p class="loader-word">Angeology</p>
+      <p class="loader-sub"><span id="loaderCount">0</span>% &middot; cruelty free, always</p>
+    </div>
+  </div>
+
+  <!-- ============ NAV: every page, one row, one style ============ -->
+  <header class="topnav" id="topnav">
+    <a class="nav-logo" href="index.html" aria-label="Angeology — home">Angeology</a>
+    <nav aria-label="Main">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="shop.html"><span class="t">Shop</span><span class="s" aria-hidden="true">shop</span></a></li>
+        <li><a href="collections.html"><span class="t">Collections</span><span class="s" aria-hidden="true">collections</span></a></li>
+        <li><a href="lookbook.html"><span class="t">Lookbook</span><span class="s" aria-hidden="true">lookbook</span></a></li>
+        <li><a href="cruelty-free.html"><span class="t">Cruelty free</span><span class="s" aria-hidden="true">cruelty free</span></a></li>
+        <li><a href="about.html"><span class="t">Our story</span><span class="s" aria-hidden="true">our story</span></a></li>
+        <li><a href="contact.html"><span class="t">Contact</span><span class="s" aria-hidden="true">contact</span></a></li>
+        <li><a href="search.html"><span class="t">Search</span><span class="s" aria-hidden="true">search</span></a></li>
+        <li><a href="account.html" aria-current="page"><span class="t">Account</span><span class="s" aria-hidden="true">account</span></a></li>
+        <li><a href="cart.html"><span class="t">Bag (0)</span><span class="s" aria-hidden="true">bag (0)</span></a></li>
+      </ul>
+      <span class="nav-heart" id="navHeart" aria-hidden="true">♡</span>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+  </header>
+
+  <!-- menu overlay (tablet / mobile) -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu-page">
+      <button class="menu-close" id="menuClose">Close</button>
+      <p class="menu-title">Index</p>
+      <ol class="menu-list" id="menuList"></ol>
+      <img src="img/deco/bow.png" alt="" class="menu-bow">
+    </div>
+  </div>
+
+  <main class="acc-page">
+
+    <!-- ============ HERO: the membership card ============ -->
+    <section class="ac-hero" id="top">
+      <div class="ac-copy">
+        <p class="sec-num">01</p>
+        <h1 class="ac-title"><span class="hl-in">Angel</span> <em class="script hl-in">club</em></h1>
+        <p class="ac-lede" id="acLede">Your little corner of heaven: wishlist, bag, vow and tarot card, all in one place. Join with just a name, no password needed.</p>
+        <p class="ac-preview"><b>preview</b> accounts aren’t live yet. What you enter stays in this browser, on this device, and is never sent anywhere.</p>
+      </div>
+
+      <div class="ac-visual">
+        <figure class="ac-photo"><div class="slot" data-img="account.jpg" data-alt="A pink satin vanity with three arched mirrors, pearls and little lamps" data-ratio="4 / 5"><span class="slot-label">account.jpg<br><small>portrait · 4:5</small></span></div></figure>
+        <div class="card-stage" id="cardStage">
+          <div class="mcard" id="mcard" aria-label="Angel club membership card">
+            <span class="mc-holo" aria-hidden="true"></span>
+            <span class="mc-shine" aria-hidden="true"></span>
+            <img src="img/deco/wings.png" alt="" class="mc-wings">
+            <img src="img/deco/bow.png" alt="" class="mc-bow">
+            <p class="mc-kicker">the house of angeology · angel club</p>
+            <p class="mc-name" id="mcName">your name here</p>
+            <div class="mc-foot">
+              <p><span>member</span><b id="mcNo">N° 0000</b></p>
+              <p><span>since</span><b id="mcSince">today</b></p>
+              <p><span>status</span><b id="mcStatus">guest</b></p>
+            </div>
+            <p class="mc-kind">♡ cruelty free, forever</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ JOIN (shown to guests) ============ -->
+    <section class="join" id="join">
+      <form class="join-form" id="joinForm" novalidate>
+        <p class="jf-kicker">application for wings</p>
+        <h2 class="jf-title">Join the <em class="script">club</em></h2>
+        <div class="jf-field">
+          <label for="jName">Your name</label>
+          <input id="jName" type="text" maxlength="28" autocomplete="given-name" placeholder="as it should be written on your card" required>
+        </div>
+        <div class="jf-field">
+          <label for="jEmail">Email <small>(optional)</small></label>
+          <input id="jEmail" type="email" autocomplete="email" placeholder="for the day the club opens for real">
+        </div>
+        <fieldset class="jf-chips">
+          <legend>Your side</legend>
+          <label><input type="radio" name="side" value="coquette" checked> coquette</label>
+          <label><input type="radio" name="side" value="alt"> alternative</label>
+          <label><input type="radio" name="side" value="both"> a bit of both</label>
+        </fieldset>
+        <fieldset class="jf-chips">
+          <legend>Birthday month <small>(for a future birthday gift)</small></legend>
+          <div class="jf-months" id="jMonths"></div>
+        </fieldset>
+        <p class="jf-error" id="jError" role="alert"></p>
+        <div class="jf-foot">
+          <button type="submit" class="btn btn-fill">Get my wings <span class="arrow"></span></button>
+          <p class="jf-note">No password: nothing here is private enough to need one, and nothing leaves your device.</p>
+        </div>
+      </form>
+
+      <ul class="perks">
+        <li><span class="pk-n">i.</span><p><b>Your tarot card</b> kept from the collections quiz</p></li>
+        <li><span class="pk-n">ii.</span><p><b>Your wishlist</b> saved from every heart you tap in the shop</p></li>
+        <li><span class="pk-n">iii.</span><p><b>Your vow</b> the certificate you sign on the cruelty free page</p></li>
+        <li><span class="pk-n">iv.</span><p><b>Soon</b> birthday gifts, early drops and order tracking, when the club opens for real</p></li>
+      </ul>
+    </section>
+
+    <!-- ============ DASHBOARD (shown to members) ============ -->
+    <section class="dash" id="dash" hidden>
+      <header class="dash-head">
+        <p class="sec-num">02</p>
+        <h2 class="sec-title">Hello, <em class="script" id="dashName">angel</em></h2>
+        <p class="sec-sub" id="dashSub"></p>
+      </header>
+
+      <div class="tiles">
+        <article class="tile t-wish">
+          <p class="tl-k">wishlist</p>
+          <h3 class="tl-h">Things you <em>adore</em></h3>
+          <div class="tl-body" id="tWish"></div>
+        </article>
+
+        <article class="tile t-bag">
+          <p class="tl-k">bag</p>
+          <h3 class="tl-h">In your <em>bag</em></h3>
+          <div class="tl-body" id="tBag"></div>
+        </article>
+
+        <article class="tile t-card">
+          <p class="tl-k">your tarot card</p>
+          <div class="tl-body" id="tCard"></div>
+        </article>
+
+        <article class="tile t-vow">
+          <p class="tl-k">the vow</p>
+          <div class="tl-body" id="tVow"></div>
+        </article>
+
+        <article class="tile t-profile">
+          <p class="tl-k">shade profile</p>
+          <h3 class="tl-h">Your <em>colours</em></h3>
+          <div class="tl-body">
+            <p class="pf-label">undertone</p>
+            <div class="pf-chips" id="pfTone">
+              <button type="button" data-v="cool">cool</button>
+              <button type="button" data-v="neutral">neutral</button>
+              <button type="button" data-v="warm">warm</button>
+            </div>
+            <p class="pf-label">finish you love</p>
+            <div class="pf-chips" id="pfFinish">
+              <button type="button" data-v="matte">matte</button>
+              <button type="button" data-v="satin">satin</button>
+              <button type="button" data-v="glitter">glitter</button>
+            </div>
+            <div class="pf-picks" id="pfPicks"></div>
+          </div>
+        </article>
+
+        <article class="tile t-recent">
+          <p class="tl-k">recent searches</p>
+          <div class="tl-body" id="tRecent"></div>
+        </article>
+
+        <article class="tile t-orders">
+          <p class="tl-k">orders</p>
+          <h3 class="tl-h">No orders <em>yet</em></h3>
+          <div class="tl-body">
+            <p>Checkout opens soon. When it does, your orders and their little journeys will live here.</p>
+            <a href="shipping.html" class="text-link">how shipping will work</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="dash-foot">
+        <button type="button" class="btn btn-line" id="editMe">Edit my card</button>
+        <button type="button" class="text-link" id="signOut">sign out on this device</button>
+      </div>
+    </section>
+
+    <!-- ============ SATIN RIBBON ============ -->
+    <section class="ribbon" aria-label="Our promises">
+      <svg viewBox="0 0 1200 220" preserveAspectRatio="none" class="ribbon-svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="satin" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#ffe6ea"/>
+            <stop offset=".45" stop-color="#f5cbd7"/>
+            <stop offset=".55" stop-color="#eeb4c3"/>
+            <stop offset="1" stop-color="#ffdce2"/>
+          </linearGradient>
+          <path id="ribbonPath" d="M-40,120 C150,20 300,200 480,110 S800,20 960,120 S1150,190 1260,90"/>
+        </defs>
+        <use href="#ribbonPath" class="ribbon-band"/>
+        <use href="#ribbonPath" class="ribbon-stitch"/>
+        <text class="ribbon-text"><textPath href="#ribbonPath" id="ribbonText" startOffset="0">
+          never tested on animals ✦ vegan formulas ✦ soft hearts, sharp edges ✦ ribbon tint ✦ fallen lash ✦ pearl dew ✦ never tested on animals ✦ vegan formulas ✦ soft hearts, sharp edges ✦ ribbon tint ✦ fallen lash ✦ pearl dew ✦
+        </textPath></text>
+      </svg>
+    </section>
+
+
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="ft-top">
+      <div class="ft-col">
+        <p class="ft-kicker">from the back cover</p>
+        <p class="ft-quote">“Soft enough to cry in, sharp enough to start a war.”<span>— the moon, probably</span></p>
+        <p class="ft-quote">“I've never seen a halo this glossy.”<span>— a passing cloud</span></p>
+      </div>
+      <div class="ft-col ft-center">
+        <a class="logo logo-md" href="index.html" aria-label="Angeology — home">
+          <img src="img/deco/wing-l.png" alt="" class="logo-wing logo-wing-l">
+          <img src="img/deco/wing-r.png" alt="" class="logo-wing logo-wing-r">
+          <svg class="logo-frame" viewBox="0 0 400 180" aria-hidden="true"><use href="#cartouche"/></svg>
+          <span class="logo-text">
+            <span class="logo-the">the house of</span>
+            <span class="logo-word">Angeology</span>
+            <span class="logo-sub">cruelty free cosmetics</span>
+          </span>
+          <img src="img/deco/bow.png" alt="" class="logo-bow">
+        </a>
+        <p class="ft-promise">No animal was ever harmed to make you pretty.</p>
+      </div>
+      <div class="ft-col">
+        <p class="ft-kicker">index</p>
+        <ul class="ft-links">
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="cruelty-free.html">Cruelty free</a></li>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="shipping.html">Shipping</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="ft-giant" aria-hidden="true">Angeology</p>
+    <div class="ft-bottom">
+      <p>© 2026 Angeology · vegan · cruelty free · never tested on animals</p>
+      <a href="#top" class="text-link">back to the top</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/account.js"></script>
+</body>
+  <!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <          *
+-->
+</html>

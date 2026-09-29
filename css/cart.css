@@ -1,0 +1,149 @@
+/* =========================================================
+   ANGEOLOGY — cart.css (loads after style.css)
+   A vanity tray of treasures + a scalloped pink receipt.
+   ========================================================= */
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- head ---------- */
+.bg-head { max-width: 1320px; margin: 0 auto; padding: 130px var(--gutter) 40px; }
+.bg-title { margin: 0; font-family: var(--serif); font-weight: 400; font-size: clamp(84px, 12vw, 200px); line-height: 1.2; letter-spacing: -.03em; }
+.bg-title .hl-in { display: inline-block; }
+.bg-title .script { font-size: 1.08em; color: var(--rose); padding: 0 .08em; }
+.bg-sub { margin: 0; min-height: 1.6em; font-family: var(--serif); font-style: italic; font-size: 22px; color: var(--rose-ink); }
+
+/* ---------- layout ---------- */
+.bg-grid { display: grid; grid-template-columns: 1fr 400px; gap: clamp(30px, 5vw, 80px); align-items: start; max-width: 1320px; margin: 0 auto; padding: 20px var(--gutter) 120px; }
+.bg-grid.is-empty { grid-template-columns: 1fr; }
+.receipt[hidden] { display: none; }
+
+/* ---------- the tray ---------- */
+.tray { position: relative; padding: clamp(14px, 2.4vw, 30px); border-radius: 34px; background: repeating-linear-gradient(90deg, rgba(255, 255, 255, .55) 0 18px, transparent 18px 36px), var(--blush); box-shadow: 0 0 0 1px var(--espresso), inset 0 0 0 8px var(--paper), inset 0 0 0 9px var(--rose), 0 40px 70px -40px rgba(64, 46, 42, .5); }
+.tr-list { list-style: none; margin: 0; padding: 0; }
+.tr-item { position: relative; display: grid; grid-template-columns: 110px 1fr auto auto; grid-template-areas: "thumb info qty price"; gap: 10px 22px; align-items: center; margin-bottom: 12px; padding: 12px 56px 12px 12px; overflow: hidden; background: var(--paper); border-radius: 22px; box-shadow: 0 0 0 1px var(--line), 0 16px 26px -22px rgba(64, 46, 42, .5); }
+.tr-thumb { grid-area: thumb; display: block; overflow: hidden; border-radius: 16px; --pbg: var(--petal); }
+.tr-thumb.p-eyes, .al-thumb.p-eyes { --pbg: var(--lilac); }
+.tr-thumb.p-lips, .al-thumb.p-lips { --pbg: var(--blush); }
+.tr-thumb.p-tools, .al-thumb.p-tools { --pbg: var(--almond); }
+.tr-thumb .slot, .tr-palette, .al-thumb .slot { background: radial-gradient(circle, rgba(255, 255, 255, .85) 2px, transparent 2.5px) 0 0 / 14px 14px, var(--pbg); }
+.tr-thumb .slot-label, .al-thumb .slot-label { font-size: 8px; }
+.tr-palette { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; aspect-ratio: 1; padding: 14px; --pbg: var(--lilac); }
+.tr-palette span { border-radius: 3px; background-size: cover; background-position: center; }
+.tr-info { grid-area: info; min-width: 0; }
+.tr-cat { margin: 0; font-size: 10px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; color: var(--graphite); }
+.tr-name { display: block; margin: 2px 0 6px; font-family: var(--serif); font-size: clamp(24px, 2.2vw, 32px); line-height: 1.15; text-decoration: none; }
+.tr-name:hover { font-style: italic; color: var(--rose-ink); }
+.tr-shade { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; margin: 0; font-size: 12px; color: var(--graphite); }
+.tr-shade span { font-size: 10px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; }
+.tr-shade select { max-width: 100%; padding: 4px 30px 4px 12px; border: 1px solid var(--espresso); border-radius: 999px; cursor: pointer; font-family: var(--serif); font-style: italic; font-size: 17px; color: var(--espresso); -webkit-appearance: none; appearance: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23402e2a' stroke-width='1.3'/%3E%3C/svg%3E") right 12px center / 10px no-repeat, var(--paper); }
+.tr-shade select:focus-visible { outline: 2px solid var(--rose); outline-offset: 2px; }
+
+.qty { grid-area: qty; justify-self: start; display: inline-flex; align-items: center; border: 1px solid var(--espresso); border-radius: 999px; }
+.qty button { width: 38px; height: 38px; border: 0; border-radius: 50%; background: none; cursor: pointer; font-size: 18px; color: var(--espresso); transition: background .3s; }
+.qty button:hover { background: var(--petal); }
+.qty output { min-width: 20px; text-align: center; font-family: var(--serif); font-size: 22px; }
+.tr-price { grid-area: price; margin: 0; min-width: 76px; text-align: right; font-family: var(--serif); font-size: 26px; white-space: nowrap; }
+.tr-remove { position: absolute; right: 12px; top: 12px; width: 34px; height: 34px; border: 1px solid var(--line); border-radius: 50%; background: var(--paper); cursor: pointer; font-size: 18px; line-height: 1; color: var(--graphite); transition: background .3s, color .3s, rotate .4s var(--ease); }
+.tr-remove:hover { background: var(--rose-ink); color: #fff; rotate: 90deg; }
+.tr-clear { display: block; margin: 12px auto 0; border: 0; background: none; cursor: pointer; }
+
+.empty { padding: clamp(40px, 7vw, 90px) 24px; text-align: center; background: var(--paper); border-radius: 24px; }
+.empty-feather { width: 120px; margin: 0 auto 10px; animation: bob 3.6s ease-in-out infinite; }
+.empty-t { margin: 0 0 10px; font-family: var(--serif); font-size: clamp(40px, 5vw, 70px); line-height: 1.2; }
+.empty-t .script { color: var(--rose-ink); font-size: 1.1em; }
+.empty p:not(.empty-t) { margin: 0 auto 26px; max-width: 30em; }
+.empty .btn-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+
+/* ---------- the receipt ---------- */
+.receipt-wrap { position: sticky; top: 96px; }
+.receipt {
+  position: relative; padding: 34px 30px 60px;
+  background: repeating-linear-gradient(180deg, transparent 0 31px, rgba(169, 76, 100, .1) 31px 32px), var(--petal);
+  /* scalloped bottom edge */
+  -webkit-mask: radial-gradient(14px at 50% 100%, #0000 98%, #000) 50% 100% / 28px 100%;
+          mask: radial-gradient(14px at 50% 100%, #0000 98%, #000) 50% 100% / 28px 100%;
+  border-radius: 20px 20px 0 0; rotate: 1deg;
+}
+.receipt-wrap { filter: drop-shadow(0 30px 30px rgba(64, 46, 42, .22)) drop-shadow(0 0 1px rgba(64, 46, 42, .5)); }
+.bg-grid.is-empty .receipt-wrap { display: none; }
+.rc-kicker { margin: 0 0 16px; text-align: center; font-size: 10px; font-weight: 600; letter-spacing: .3em; text-transform: uppercase; color: var(--rose-ink); }
+.fs-text { margin: 0 0 10px; text-align: center; font-family: var(--serif); font-style: italic; font-size: 19px; line-height: 1.3; }
+.fs-text b { font-weight: 400; color: var(--rose-ink); }
+.fs-track { position: relative; height: 8px; margin: 0 14px 26px; border-radius: 999px; background: var(--paper); box-shadow: inset 0 0 0 1px var(--line); }
+.fs-fill { position: absolute; left: 0; top: 0; bottom: 0; width: 0; border-radius: inherit; background: linear-gradient(90deg, var(--rose), var(--rose-ink)); transition: width .8s var(--ease); }
+.fs-bow { position: absolute; top: 50%; left: 0; width: 38px; translate: -50% -50%; transition: left .8s var(--ease); animation: bowSway 2.4s ease-in-out infinite; }
+
+.rc-lines { display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; margin: 0 0 16px; }
+.rc-lines dt { display: flex; align-items: baseline; gap: 10px; font-size: 11px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; line-height: 32px; white-space: nowrap; }
+.rc-lines dt::after { content: ""; flex: 1; min-width: 20px; border-bottom: 2px dotted rgba(64, 46, 42, .35); }
+.rc-lines dd { margin: 0; text-align: right; font-family: var(--serif); font-size: 22px; line-height: 32px; white-space: nowrap; }
+.rc-lines [hidden] { display: none; }
+
+.gift { display: flex; align-items: center; gap: 10px; margin: 0 0 16px; cursor: pointer; font-family: var(--serif); font-style: italic; font-size: 18px; }
+.gift input { width: 20px; height: 20px; accent-color: var(--rose-ink); }
+.gift small { font-family: var(--sans); font-style: normal; font-size: 11px; color: var(--graphite); }
+.promo { display: flex; gap: 8px; }
+.promo input { flex: 1; min-width: 0; padding: 10px 16px; border: 1px solid var(--espresso); border-radius: 999px; background: var(--paper); font-family: var(--sans); font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--espresso); }
+.promo input::placeholder { color: rgba(64, 46, 42, .45); }
+.promo input:focus { outline: 2px solid var(--rose); outline-offset: 2px; }
+.promo .btn { padding: 10px 18px; }
+.promo-msg { margin: 6px 0 0; min-height: 1.4em; font-family: var(--serif); font-style: italic; font-size: 16px; line-height: 1.35; color: var(--rose-ink); }
+.rc-total { display: flex; justify-content: space-between; align-items: baseline; margin: 14px 0 18px; padding-top: 14px; border-top: 2px dashed var(--espresso); }
+.rc-total span { font-size: 11px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; }
+.rc-total b { font-family: var(--serif); font-weight: 400; font-size: 46px; line-height: 1.1; color: var(--rose-ink); }
+.rc-checkout { width: 100%; justify-content: center; }
+.rc-note { margin: 10px 0 0; min-height: 0; font-size: 13px; line-height: 1.5; }
+.rc-note:empty { display: none; }
+.rc-note a { color: var(--rose-ink); }
+.rc-kind { margin: 16px 0 0; font-family: var(--serif); font-style: italic; font-size: 16px; line-height: 1.35; }
+.rc-stamp { width: 92px; margin: 14px 6px 0 auto; rotate: -12deg; }
+.rc-stamp svg { width: 100%; overflow: visible; animation: stampSpin 26s linear infinite; }
+@keyframes stampSpin { to { rotate: 360deg; } }
+
+/* ---------- you might also love ---------- */
+.also { max-width: 1320px; margin: 0 auto; padding: 60px var(--gutter) 130px; }
+.also[hidden] { display: none; }
+.also .sec-head { margin-bottom: 50px; }
+.also-list { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.al-item { position: relative; padding: 12px 12px 18px; background: var(--paper); border-radius: 22px; box-shadow: 0 0 0 1px var(--line); transition: translate .4s var(--ease), box-shadow .3s; }
+.al-item:nth-child(odd) { rotate: -1.2deg; }
+.al-item:nth-child(even) { rotate: 1.2deg; }
+.al-item:hover { translate: 0 -6px; box-shadow: 0 0 0 1px var(--rose), 0 26px 36px -24px rgba(64, 46, 42, .5); }
+.al-thumb { display: block; overflow: hidden; border-radius: 16px; margin-bottom: 12px; --pbg: var(--petal); }
+.al-thumb .tr-palette { padding: 22px; }
+.al-name { display: block; padding-right: 48px; font-family: var(--serif); font-size: 26px; line-height: 1.15; text-decoration: none; }
+.al-name:hover { font-style: italic; color: var(--rose-ink); }
+.al-meta { margin: 4px 0 0; padding-right: 48px; font-size: 12px; color: var(--graphite); }
+.al-add { position: absolute; right: 14px; bottom: 18px; width: 40px; height: 40px; border: 0; border-radius: 50%; cursor: pointer; background: var(--espresso); color: var(--paper); font-size: 20px; transition: background .3s, scale .3s var(--ease); }
+.al-add:hover { background: var(--rose-ink); scale: 1.08; }
+
+/* ---------- toast ---------- */
+.toast { position: fixed; left: 50%; bottom: 26px; z-index: 95; max-width: calc(100vw - 32px); padding: 14px 24px; border-radius: 999px; background: var(--espresso); color: var(--paper); font-size: 13px; translate: -50% 180%; transition: translate .5s var(--ease); box-shadow: 0 20px 40px -20px rgba(64, 46, 42, .6); }
+.toast.show { translate: -50% 0; }
+.toast b { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 18px; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 1080px) {
+  .bg-grid { grid-template-columns: 1fr; }
+  .receipt-wrap { position: relative; top: 0; max-width: 520px; margin: 0 auto; width: 100%; }
+  .receipt { rotate: 0deg; }
+  .also-list { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 700px) {
+  .tr-item { grid-template-columns: 84px 1fr auto; grid-template-areas: "thumb info info" "thumb qty price"; padding-right: 50px; }
+  .tr-price { font-size: 22px; min-width: 0; }
+  .tr-remove { right: 10px; top: 10px; }
+}
+@media (max-width: 560px) {
+  .bg-title { font-size: 22vw; }
+  .bg-sub { font-size: 18px; }
+  .tray { border-radius: 24px; }
+  .tr-item { grid-template-columns: 72px 1fr; grid-template-areas: "thumb info" "qty price"; gap: 10px 14px; }
+  .tr-name { font-size: 22px; }
+  .receipt { padding: 28px 20px 56px; }
+  .also-list { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .al-item { rotate: 0deg !important; padding: 8px 8px 14px; }
+  .al-name { font-size: 20px; padding-right: 0; }
+  .al-meta { padding-right: 44px; }
+  .al-add { right: 8px; bottom: 10px; width: 36px; height: 36px; }
+}

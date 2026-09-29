@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop — ANGEOLOGY cruelty free cosmetics</title>
+  <meta name="description" content="Shop ANGEOLOGY: 16 vegan, cruelty free makeup essentials for face, eyes and lips. Never tested on animals.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Montserrat:wght@300;400;500;600&family=Imperial+Script&family=Pinyon+Script&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shop.css">
+</head>
+<body data-loader="short">
+
+  <!-- shared SVG: baroque cartouche for the logo -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#b9bcc6"/>
+        <stop offset=".5" stop-color="#eef0f4"/><stop offset=".7" stop-color="#8e919b"/><stop offset="1" stop-color="#d9dbe1"/>
+      </linearGradient>
+      <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+        <rect width="10" height="10" fill="#fff7fa"/><circle cx="5" cy="5" r="1.3" fill="#ffc9da"/>
+      </pattern>
+      <symbol id="cartouche" viewBox="0 0 400 180">
+        <g fill="none" stroke="url(#silver)" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M72,38 C120,18 160,26 200,20 C240,26 280,18 328,38 C352,46 366,62 372,90 C366,118 352,134 328,142 C280,162 240,154 200,160 C160,154 120,162 72,142 C48,134 34,118 28,90 C34,62 48,46 72,38Z" fill="url(#dots)" stroke-width="6"/>
+          <path d="M78,48 C122,30 162,37 200,32 C238,37 278,30 322,48 C342,56 354,70 359,90 C354,110 342,124 322,132 C278,150 238,143 200,148 C162,143 122,150 78,132 C58,124 46,110 41,90 C46,70 58,56 78,48Z" stroke-width="1.6" stroke="#e7a3bb"/>
+          <path d="M28,90 C14,82 4,66 12,52 C20,40 38,44 36,56 C35,64 26,64 25,58" stroke-width="5"/>
+          <path d="M28,90 C14,98 4,114 12,128 C20,140 38,136 36,124 C35,116 26,116 25,122" stroke-width="5"/>
+          <path d="M372,90 C386,82 396,66 388,52 C380,40 362,44 364,56 C365,64 374,64 375,58" stroke-width="5"/>
+          <path d="M372,90 C386,98 396,114 388,128 C380,140 362,136 364,124 C365,116 374,116 375,122" stroke-width="5"/>
+          <path d="M72,38 C62,22 72,8 88,12 C98,15 96,28 86,27" stroke-width="4"/>
+          <path d="M328,38 C338,22 328,8 312,12 C302,15 304,28 314,27" stroke-width="4"/>
+          <path d="M72,142 C62,158 72,172 88,168 C98,165 96,152 86,153" stroke-width="4"/>
+          <path d="M328,142 C338,158 328,172 312,168 C302,165 304,152 314,153" stroke-width="4"/>
+          <path d="M168,24 C160,8 176,0 186,8 C192,13 188,20 182,18" stroke-width="4"/>
+          <path d="M232,24 C240,8 224,0 214,8 C208,13 212,20 218,18" stroke-width="4"/>
+          <path d="M170,156 C162,172 178,180 188,172 C194,167 190,160 184,162" stroke-width="4"/>
+          <path d="M230,156 C238,172 222,180 212,172 C206,167 210,160 216,162" stroke-width="4"/>
+          <path d="M200,172 C190,164 190,156 196,155 C198,155 200,157 200,159 C200,157 202,155 204,155 C210,156 210,164 200,172Z" fill="#f59ab8" stroke-width="1.5"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ LOADER ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <img class="loader-bow" src="img/deco/bow.png" alt="">
+      <div class="loader-pearls" id="loaderPearls"></div>
+      <p class="loader-word">Angeology</p>
+      <p class="loader-sub"><span id="loaderCount">0</span>% &middot; cruelty free, always</p>
+    </div>
+  </div>
+
+  <!-- ============ NAV: every page, one row, one style ============ -->
+  <header class="topnav" id="topnav">
+    <a class="nav-logo" href="index.html" aria-label="Angeology — home">Angeology</a>
+    <nav aria-label="Main">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="shop.html" aria-current="page"><span class="t">Shop</span><span class="s" aria-hidden="true">shop</span></a></li>
+        <li><a href="collections.html"><span class="t">Collections</span><span class="s" aria-hidden="true">collections</span></a></li>
+        <li><a href="lookbook.html"><span class="t">Lookbook</span><span class="s" aria-hidden="true">lookbook</span></a></li>
+        <li><a href="cruelty-free.html"><span class="t">Cruelty free</span><span class="s" aria-hidden="true">cruelty free</span></a></li>
+        <li><a href="about.html"><span class="t">Our story</span><span class="s" aria-hidden="true">our story</span></a></li>
+        <li><a href="contact.html"><span class="t">Contact</span><span class="s" aria-hidden="true">contact</span></a></li>
+        <li><a href="search.html"><span class="t">Search</span><span class="s" aria-hidden="true">search</span></a></li>
+        <li><a href="account.html"><span class="t">Account</span><span class="s" aria-hidden="true">account</span></a></li>
+        <li><a href="cart.html"><span class="t">Bag (0)</span><span class="s" aria-hidden="true">bag (0)</span></a></li>
+      </ul>
+      <span class="nav-heart" id="navHeart" aria-hidden="true">♡</span>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+  </header>
+
+  <!-- menu overlay (tablet / mobile) -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu-page">
+      <button class="menu-close" id="menuClose">Close</button>
+      <p class="menu-title">Index</p>
+      <ol class="menu-list" id="menuList"></ol>
+      <img src="img/deco/bow.png" alt="" class="menu-bow">
+    </div>
+  </div>
+
+  <main class="shop">
+
+    <!-- ============ SHOP HERO ============ -->
+    <section class="shop-hero" id="top">
+      <svg class="wave wave-shop" viewBox="0 0 1440 600" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M-20,420 C240,300 420,560 700,430 S1120,220 1460,360"/>
+      </svg>
+      <div class="sh-copy">
+        <p class="sec-num">01</p>
+        <h1 class="shop-title">
+          <span class="hl-in">The</span>
+          <span class="pill pill-shop"><span class="slot" data-img="shop-pill.jpg" data-alt="Close-up of a glossy pink lip"><span class="slot-label">shop-pill.jpg</span></span></span>
+          <em class="script hl-in">shop</em>
+        </h1>
+        <p class="sh-sub">Sixteen vegan formulas and not a single animal harmed. Tap a shade — every product changes colour to show you.</p>
+        <ul class="sh-promises">
+          <li>100% vegan</li>
+          <li>never tested on animals</li>
+          <li>free shipping over € 40</li>
+        </ul>
+      </div>
+      <div class="sh-collage">
+        <figure class="polaroid pol-shop">
+          <span class="tape tape-tl"></span>
+          <div class="slot" data-img="shop-hero.jpg" data-alt="Campaign portrait for the shop" data-ratio="4 / 5"><span class="slot-label">img/shop-hero.jpg<br><small>4 : 5 — campaign</small></span></div>
+          <figcaption>fresh from heaven</figcaption>
+        </figure>
+        <article class="new-note">
+          <span class="tape tape-tr"></span>
+          <p class="new-title">new in,</p>
+          <p>Halo Gloss, Angel Dust &amp; the Pearl Palette just landed.</p>
+          <button type="button" class="text-link" id="seeNew">see what’s new</button>
+        </article>
+        <img src="img/deco/bow.png" alt="" class="sh-bow">
+        <img src="img/deco/sparkles.png" alt="" class="sh-sparkles">
+      </div>
+    </section>
+
+    <!-- ============ CATEGORY INDEX + SORT ============ -->
+    <div class="shop-tools" id="shopTools">
+      <nav class="cat-index" aria-label="Categories">
+        <div class="cat-list" id="catList"></div>
+        <span class="cat-heart" id="catHeart" aria-hidden="true">♡</span>
+      </nav>
+      <div class="shop-bar">
+        <p class="shop-count" id="shopCount" aria-live="polite"></p>
+        <label class="sort">sort by
+          <select id="sortBy">
+            <option value="best">Bestsellers</option>
+            <option value="new">New in</option>
+            <option value="low">Price: low to high</option>
+            <option value="high">Price: high to low</option>
+          </select>
+        </label>
+      </div>
+    </div>
+
+    <!-- ============ PRODUCT GRID ============ -->
+    <section class="grid" id="grid" aria-label="Products">
+      <!-- product cards are built from js/products.js -->
+      <aside class="ed-card ed-quote" data-ed="quote" aria-label="Our promise">
+        <span class="tape tape-tl"></span>
+        <p class="ed-kicker">a promise</p>
+        <p class="ed-line">No animal was ever harmed <em class="script">to make you pretty.</em></p>
+        <a href="cruelty-free.html" class="btn btn-line">Read our vow <span class="arrow"></span></a>
+        <div class="ed-stamp"><svg viewBox="0 0 200 200" aria-hidden="true">
+              <defs><path id="edStamp" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+              <circle cx="100" cy="100" r="94" class="st-ring"/>
+              <circle cx="100" cy="100" r="54" class="st-ring thin"/>
+              <text class="st-text"><textPath href="#edStamp">never tested on animals ✦ 100% vegan ✦ </textPath></text>
+              <path class="st-heart" d="M100 128 C70 108 68 86 84 80 C93 77 99 83 100 88 C101 83 107 77 116 80 C132 86 130 108 100 128Z"/>
+            </svg></div>
+      </aside>
+      <aside class="ed-card ed-photo" data-ed="photo" aria-label="Editorial">
+        <div class="slot" data-img="shop-editorial.jpg" data-alt="Editorial photo of a model wearing Angeology" data-ratio="3 / 4"><span class="slot-label">img/shop-editorial.jpg<br><small>3 : 4 — editorial</small></span></div>
+        <p class="ed-caption"><em class="script">worn by angels,</em> tested on none</p>
+      </aside>
+    </section>
+
+    <p class="grid-empty" id="gridEmpty" hidden>Nothing here yet — angels are still mixing it ♡</p>
+
+    <!-- ============ SATIN RIBBON ============ -->
+    <section class="ribbon" aria-label="Our promises">
+      <svg viewBox="0 0 1200 220" preserveAspectRatio="none" class="ribbon-svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="satin" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#ffe6ea"/>
+            <stop offset=".45" stop-color="#f5cbd7"/>
+            <stop offset=".55" stop-color="#eeb4c3"/>
+            <stop offset="1" stop-color="#ffdce2"/>
+          </linearGradient>
+          <path id="ribbonPath" d="M-40,120 C150,20 300,200 480,110 S800,20 960,120 S1150,190 1260,90"/>
+        </defs>
+        <use href="#ribbonPath" class="ribbon-band"/>
+        <use href="#ribbonPath" class="ribbon-stitch"/>
+        <text class="ribbon-text"><textPath href="#ribbonPath" id="ribbonText" startOffset="0">
+          never tested on animals ✦ vegan formulas ✦ soft hearts, sharp edges ✦ ribbon tint ✦ fallen lash ✦ pearl dew ✦ never tested on animals ✦ vegan formulas ✦ soft hearts, sharp edges ✦ ribbon tint ✦ fallen lash ✦ pearl dew ✦
+        </textPath></text>
+      </svg>
+    </section>
+
+
+    <!-- ============ PROMISES ============ -->
+    <section class="shop-promise">
+      <ul>
+        <li><span class="sp-n">0</span><span class="sp-l">animals harmed, ever — not by us, not by our suppliers</span></li>
+        <li><span class="sp-n">16</span><span class="sp-l">formulas, every one of them vegan</span></li>
+        <li><span class="sp-n">€40</span><span class="sp-l">and shipping is on us, wrapped in a satin bow</span></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- ============ QUICK VIEW ============ -->
+  <div class="qv" id="qv" aria-hidden="true">
+    <div class="qv-panel" role="dialog" aria-modal="true" aria-labelledby="qvName">
+      <button type="button" class="qv-close" id="qvClose">Close</button>
+      <div class="qv-media"><div class="slot cutout" id="qvSlot" data-ratio="1 / 1"><span class="slot-label"></span></div></div>
+      <div class="qv-body">
+        <p class="qv-cat" id="qvCat"></p>
+        <h2 class="qv-name" id="qvName"></h2>
+        <p class="qv-latin" id="qvLatin"></p>
+        <p class="qv-price" id="qvPrice"></p>
+        <p class="qv-desc" id="qvDesc"></p>
+        <p class="oi-badges"><span>vegan</span><span>cruelty free</span><span>never tested on animals</span></p>
+        <div class="oi-shades" id="qvShades" role="group" aria-label="Shades"></div>
+        <p class="oi-shade-name" id="qvShadeName" aria-live="polite"></p>
+        <div class="qv-row">
+          <div class="qty" role="group" aria-label="Quantity">
+            <button type="button" id="qtyMinus" aria-label="One less">−</button>
+            <output id="qtyVal">1</output>
+            <button type="button" id="qtyPlus" aria-label="One more">+</button>
+          </div>
+          <button type="button" class="btn btn-fill" id="qvAdd">Add to bag <span class="arrow"></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="ft-top">
+      <div class="ft-col">
+        <p class="ft-kicker">from the back cover</p>
+        <p class="ft-quote">“Soft enough to cry in, sharp enough to start a war.”<span>— the moon, probably</span></p>
+        <p class="ft-quote">“I've never seen a halo this glossy.”<span>— a passing cloud</span></p>
+      </div>
+      <div class="ft-col ft-center">
+        <a class="logo logo-md" href="index.html" aria-label="Angeology — home">
+          <img src="img/deco/wing-l.png" alt="" class="logo-wing logo-wing-l">
+          <img src="img/deco/wing-r.png" alt="" class="logo-wing logo-wing-r">
+          <svg class="logo-frame" viewBox="0 0 400 180" aria-hidden="true"><use href="#cartouche"/></svg>
+          <span class="logo-text">
+            <span class="logo-the">the house of</span>
+            <span class="logo-word">Angeology</span>
+            <span class="logo-sub">cruelty free cosmetics</span>
+          </span>
+          <img src="img/deco/bow.png" alt="" class="logo-bow">
+        </a>
+        <p class="ft-promise">No animal was ever harmed to make you pretty.</p>
+      </div>
+      <div class="ft-col">
+        <p class="ft-kicker">index</p>
+        <ul class="ft-links">
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="cruelty-free.html">Cruelty free</a></li>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="shipping.html">Shipping</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="ft-giant" aria-hidden="true">Angeology</p>
+    <div class="ft-bottom">
+      <p>© 2026 Angeology · vegan · cruelty free · never tested on animals</p>
+      <a href="#top" class="text-link">back to the top</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+  <!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <          *
+-->
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQ, pillow talk — ANGEOLOGY cruelty free cosmetics</title>
+  <meta name="description" content="Pillow talk: the ANGEOLOGY FAQ. Answers about cruelty free makeup, shades, orders, shipping, returns and the Angel club.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Montserrat:wght@300;400;500;600&family=Imperial+Script&family=Pinyon+Script&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/faq.css">
+</head>
+<body data-loader="short">
+
+  <!-- shared SVG: baroque cartouche for the logo -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#b9bcc6"/>
+        <stop offset=".5" stop-color="#eef0f4"/><stop offset=".7" stop-color="#8e919b"/><stop offset="1" stop-color="#d9dbe1"/>
+      </linearGradient>
+      <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+        <rect width="10" height="10" fill="#fff7fa"/><circle cx="5" cy="5" r="1.3" fill="#ffc9da"/>
+      </pattern>
+      <symbol id="cartouche" viewBox="0 0 400 180">
+        <g fill="none" stroke="url(#silver)" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M72,38 C120,18 160,26 200,20 C240,26 280,18 328,38 C352,46 366,62 372,90 C366,118 352,134 328,142 C280,162 240,154 200,160 C160,154 120,162 72,142 C48,134 34,118 28,90 C34,62 48,46 72,38Z" fill="url(#dots)" stroke-width="6"/>
+          <path d="M78,48 C122,30 162,37 200,32 C238,37 278,30 322,48 C342,56 354,70 359,90 C354,110 342,124 322,132 C278,150 238,143 200,148 C162,143 122,150 78,132 C58,124 46,110 41,90 C46,70 58,56 78,48Z" stroke-width="1.6" stroke="#e7a3bb"/>
+          <path d="M28,90 C14,82 4,66 12,52 C20,40 38,44 36,56 C35,64 26,64 25,58" stroke-width="5"/>
+          <path d="M28,90 C14,98 4,114 12,128 C20,140 38,136 36,124 C35,116 26,116 25,122" stroke-width="5"/>
+          <path d="M372,90 C386,82 396,66 388,52 C380,40 362,44 364,56 C365,64 374,64 375,58" stroke-width="5"/>
+          <path d="M372,90 C386,98 396,114 388,128 C380,140 362,136 364,124 C365,116 374,116 375,122" stroke-width="5"/>
+          <path d="M72,38 C62,22 72,8 88,12 C98,15 96,28 86,27" stroke-width="4"/>
+          <path d="M328,38 C338,22 328,8 312,12 C302,15 304,28 314,27" stroke-width="4"/>
+          <path d="M72,142 C62,158 72,172 88,168 C98,165 96,152 86,153" stroke-width="4"/>
+          <path d="M328,142 C338,158 328,172 312,168 C302,165 304,152 314,153" stroke-width="4"/>
+          <path d="M168,24 C160,8 176,0 186,8 C192,13 188,20 182,18" stroke-width="4"/>
+          <path d="M232,24 C240,8 224,0 214,8 C208,13 212,20 218,18" stroke-width="4"/>
+          <path d="M170,156 C162,172 178,180 188,172 C194,167 190,160 184,162" stroke-width="4"/>
+          <path d="M230,156 C238,172 222,180 212,172 C206,167 210,160 216,162" stroke-width="4"/>
+          <path d="M200,172 C190,164 190,156 196,155 C198,155 200,157 200,159 C200,157 202,155 204,155 C210,156 210,164 200,172Z" fill="#f59ab8" stroke-width="1.5"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ LOADER ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <img class="loader-bow" src="img/deco/bow.png" alt="">
+      <div class="loader-pearls" id="loaderPearls"></div>
+      <p class="loader-word">Angeology</p>
+      <p class="loader-sub"><span id="loaderCount">0</span>% &middot; cruelty free, always</p>
+    </div>
+  </div>
+
+  <!-- ============ NAV: every page, one row, one style ============ -->
+  <header class="topnav" id="topnav">
+    <a class="nav-logo" href="index.html" aria-label="Angeology — home">Angeology</a>
+    <nav aria-label="Main">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="shop.html"><span class="t">Shop</span><span class="s" aria-hidden="true">shop</span></a></li>
+        <li><a href="collections.html"><span class="t">Collections</span><span class="s" aria-hidden="true">collections</span></a></li>
+        <li><a href="lookbook.html"><span class="t">Lookbook</span><span class="s" aria-hidden="true">lookbook</span></a></li>
+        <li><a href="cruelty-free.html"><span class="t">Cruelty free</span><span class="s" aria-hidden="true">cruelty free</span></a></li>
+        <li><a href="about.html"><span class="t">Our story</span><span class="s" aria-hidden="true">our story</span></a></li>
+        <li><a href="contact.html"><span class="t">Contact</span><span class="s" aria-hidden="true">contact</span></a></li>
+        <li><a href="search.html"><span class="t">Search</span><span class="s" aria-hidden="true">search</span></a></li>
+        <li><a href="account.html"><span class="t">Account</span><span class="s" aria-hidden="true">account</span></a></li>
+        <li><a href="cart.html"><span class="t">Bag (0)</span><span class="s" aria-hidden="true">bag (0)</span></a></li>
+      </ul>
+      <span class="nav-heart" id="navHeart" aria-hidden="true">♡</span>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+  </header>
+
+  <!-- menu overlay (tablet / mobile) -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu-page">
+      <button class="menu-close" id="menuClose">Close</button>
+      <p class="menu-title">Index</p>
+      <ol class="menu-list" id="menuList"></ol>
+      <img src="img/deco/bow.png" alt="" class="menu-bow">
+    </div>
+  </div>
+
+  <main class="faq-page">
+
+    <!-- ============ THE OPENING SPREAD ============ -->
+    <section class="pt-spread" id="top">
+      <figure class="pt-photo">
+        <div class="slot" data-img="faq.jpg" data-alt="A girl in a sleep mask and pink satin, sitting on a ruffled bed and wondering" data-ratio="2 / 3"><span class="slot-label">faq.jpg</span></div>
+        <figcaption><span>on the cover</span> a question at 2 a.m., in satin</figcaption>
+        <span class="pt-folio" aria-hidden="true">02</span>
+      </figure>
+      <div class="pt-page">
+        <p class="pt-kicker"><span>the interview</span><span>issue n° 07</span></p>
+        <h1 class="pt-title"><span class="hl-in">Pillow</span> <em class="script hl-in">talk</em></h1>
+        <p class="pt-stand">Eighteen questions you asked us after midnight, answered over breakfast. Everything about kindness, shades, parcels and bags, with nothing left unsaid.</p>
+        <form class="pt-search" id="fqSearch" role="search" onsubmit="return false">
+          <label for="fqQ" class="visually-hidden">Search the questions</label>
+          <input type="search" id="fqQ" placeholder="ask me anything… lashes, returns" autocomplete="off">
+          <img src="img/deco/sparkle.png" alt="" class="pt-spark">
+        </form>
+        <p class="pt-count" id="fqCount" role="status"></p>
+        <nav class="pt-toc" aria-label="Contents">
+          <p class="pt-toc-k">in this issue</p>
+          <ol><li><a href="#ch-kind"><span class="tc-n">01</span><span class="tc-name">Kindness</span><span class="tc-dots" aria-hidden="true"></span><span class="tc-p">p. 04</span></a></li><li><a href="#ch-beauty"><span class="tc-n">02</span><span class="tc-name">Products</span><span class="tc-dots" aria-hidden="true"></span><span class="tc-p">p. 06</span></a></li><li><a href="#ch-orders"><span class="tc-n">03</span><span class="tc-name">Orders</span><span class="tc-dots" aria-hidden="true"></span><span class="tc-p">p. 09</span></a></li><li><a href="#ch-post"><span class="tc-n">04</span><span class="tc-name">Shipping & returns</span><span class="tc-dots" aria-hidden="true"></span><span class="tc-p">p. 11</span></a></li><li><a href="#ch-club"><span class="tc-n">05</span><span class="tc-name">Account</span><span class="tc-dots" aria-hidden="true"></span><span class="tc-p">p. 14</span></a></li></ol>
+        </nav>
+        <span class="pt-folio pt-folio-r" aria-hidden="true">03</span>
+      </div>
+    </section>
+
+    <!-- ============ THE INTERVIEW ============ -->
+    <div class="interview" id="fqList">
+      <section class="chapter ch-kind" id="ch-kind" data-cat="kind">
+        <header class="ch-head"><span class="ch-n">01</span><h2 class="ch-title">Kindness</h2><p class="ch-sub">cruelty free, vegan, feathers</p><span class="ch-page">p. 04</span></header>
+        <div class="ch-cols">
+          <article class="qa" id="q-vegan" data-cat="kind">
+            <h3 class="qa-q"><span class="qa-mark" aria-hidden="true">Q.</span><span class="qa-text">Is cruelty free the same thing as vegan?</span></h3>
+            <p class="qa-by">asked by confused in Turin</p>
+            <div class="qa-a"><span class="qa-mark" aria-hidden="true">A.</span><p>Not quite. <b>Cruelty free</b> means nothing was tested on animals, at any step, by us or our suppliers. <b>Vegan</b> means nothing in the formula comes from an animal. We are both, for every product and every shade, always.</p></div>
+          </article>
+          <article class="qa" id="q-feathers" data-cat="kind">
+            <h3 class="qa-q"><span class="qa-mark" aria-hidden="true">Q.</span><span class="qa-text">Are all those wings and feathers real?</span></h3>
+            <p class="qa-by">asked by bird lover, Bologna</p>
+            <div class="qa-a"><span class="qa-mark" aria-hidden="true">A.</span><p>Never. Every feather you see is an illustration or a prop made of synthetic fibre. No bird was ever involved, not even the pigeon who wandered onto our set.</p></div>
+          </article>
+          <article class="qa" id="q-carmine" data-cat="kind">
+            <h3 class="qa-q"><span class="qa-mark" aria-hidden="true">Q.</span><span class="qa-text">How are your pinks so pink without carmine?</span></h3>
+            <p class="qa-by">asked by rosy cheeks, Naples</p>
+            <div class="qa-a"><span class="qa-mark" aria-hidden="true">A.</span><p>Iron oxides, plant pigments like beetroot and skin-safe synthetic colours. Just as rosy, and no insects are crushed. You can check any ingredient yourself with our <a href="cruelty-free.html#checker">ingredient checker</a>.</p></div>
+          </article>
+          <article class="qa" id="q-markets" data-cat="kind">
+            <h3 class="qa-q"><span class="qa-mark" aria-hidden="true">Q.</span><span class="qa-text">Do you sell anywhere that requires animal testing?</span></h3>
+            <p class="qa-by">asked by just checking, Vienna</p>
+            <div class="qa-a"><span class="qa-mark" aria-hidden="true">A.</span><p>No. If a market requires animal testing for cosmetics, we simply don’t sell there. Read the whole promise in <a href="cruelty-free.html#charter">our vow</a>.</p></div>
+          </article>
+        </div>
+      </section>
+      <figure class="pull pull-0" data-after="kind"><blockquote>“No bird was ever involved. Not even the pigeon.”</blockquote><figcaption>— the angels, chapter 01</figcaption></figure>
+      <section class="chapter ch-beauty" id="ch-beauty" data-cat="beauty">
+        <header class="ch-head"><span class="ch-n">02</span><h2 class="ch-title">Products</h2><p class="ch-sub">shades, skin, lashes & brushes</p><span class="ch-page">p. 06</span></header>
+        <div class="ch-cols">
+          <article class="qa" id="q-shade" data-cat="beauty">
+            <h3 class="qa-q"><span class="qa-mark" aria-hidden="true">Q.</span><span class="qa-text">How do I find my shade online?</span></h3>
+            <p class="qa-by">asked by pale & panicking, Milan</p>
+            <div class="qa-a"><span class="qa-mark" aria-hidden="true">A.</span><p>Tell your <a href="account.html">Angel club card</a> your undertone and favourite finish and it will choose shades for you. You can also <a href="search.html?q=pink">search by colour</a>. Remember that screens tint colours a little, so look at the swatch in daylight.</p></div>
+          </article>
+          <article class="qa" id="q-sensitive" data-cat="beauty">
+            <h3 class="qa-q"><span class="qa-mark" aria-hidden="true">Q.</span><span class="qa-text">My skin is very sensitive. Can I wear your makeup?</span></h3>
+            <p class="qa-by">asked by easily blushed, Rome</p>
+            <div class="qa-a"><span class="qa-mark" aria-hidden="true">A.</span><p>Our formulas are fragrance-light and every pack lists its full ingredients. Still, every skin is different: try a little on your inner arm for 24 hours first, and ask your dermatologist if you have a condition.</p></div>
+          </article>
+          <article class="qa" id="q-lashes" data-cat="beauty">
+            <h3 class="qa-q"><span class="qa-mark" aria-hidden="true">Q.</span><span class="qa-text">How many times can I wear Fallen Lash?</span></h3>
+            <p class="qa-by">asked by fluttering, Florence</p>
+            <div class="qa-a"><span class="qa-mark" aria-hidden="true">A.</span><p>Up to 20 wears. Peel the glue off gently after each use, clean them with a cotton bud and micellar water, and keep them in their case so they stay curled. They’re synthetic: never mink, silk or feathers.</p></div>
+          </article>
+          <article class="qa" id="q-brush" data-cat="beauty">
+            <h3 class="qa-q"><span class="qa-mark" aria-hidden="true">Q.</span><span class="qa-text">How do I clean my Wing Brush?</span></h3>
+            <p class="qa-by">asked by messy angel, Genoa</p>
+            <div class="qa-a"><span class="qa-mark" aria-hidden="true">A.</span><p>Once a week, swirl it in lukewarm water with a drop of gentle soap, rinse until the water runs clear, reshape it and let it dry lying flat. The synthetic bristles dry fast and never shed.</p></div>
+          </article>
+          <article class="qa" id="q-expiry" data-cat="beauty">
+            <h3 class="qa-q"><span class="qa-mark" aria-hidden="true">Q.</span><span class="qa-text">How long does my makeup last once opened?</span></h3>
+            <p class="qa-by">asked by hoarder, Palermo</p>
+            <div class="qa-a"><span class="qa-mark" aria-hidden="true">A.</span><p>Look for the little open-jar symbol on the pack: “12M” means twelve months after opening. As a rule, liners and mascaras last 6 months, lips and liquids 12, and powders like Cloud Veil and Pearl Palette up to 24.</p></div>
+          </article>
+        </div>
+      </section>
+      <figure class="pull pull-1" data-after="beauty"><blockquote>“Look at the swatch in daylight, angel.”</blockquote><figcaption>— the angels, chapter 02</figcaption></figure>
+      <section class="chapter ch-orders" id="ch-orders" data-cat="orders">
+        <header class="ch-head"><span class="ch-n">03</span><h2 class="ch-title">Orders</h2><p class="ch-sub">checkout, gifts & codes</p><span class="ch-page">p. 09</span></header>
+        <div class="ch-cols">
+          <article class="qa" id="q-checkout" data-cat="orders">
+            <h3 class="qa-q"><span class="qa-mark" aria-hidden="true">Q.</span><span class="qa-text">Why can’t I check out yet?</span></h3>
+            <p class="qa-by">asked by impatient, Verona</p>
+            <div class="qa-a"><span class="qa-mark" aria-hidden="true">A.</span><p>Our shop is still in preview, so you can fill your <a href="cart.html">bag</a> and play with it, but no payment is taken and no order is sent. Checkout opens soon. <a href="contact.html">Write to us</a> and we’ll tell you first.</p></div>
+          </article>
+          <article class="qa" id="q-gift" data-cat="orders">
+            <h3 class="qa-q"><span class="qa-mark" aria-hidden="true">Q.</span><span class="qa-text">Can you gift-wrap my order?</span></h3>
+            <p class="qa-by">asked by a secret admirer</p>
+            <div class="qa-a"><span class="qa-mark" aria-hidden="true">A.</span><p>Of course. Tick “wrap it in a satin bow” in your bag (+ € 3) and we’ll wrap everything in tissue with a satin-effect ribbon, made of recycled polyester, never silk. Prices are never printed inside a gift.</p></div>
+          </article>
+          <article class="qa" id="q-codes" data-cat="orders">
+            <h3 class="qa-q"><span class="qa-mark" aria-hidden="true">Q.</span><span class="qa-text">Where do I type a promo code?</span></h3>
+            <p class="qa-by">asked by bargain angel, Bari</p>
+            <div class="qa-a"><span class="qa-mark" aria-hidden="true">A.</span><p>In your bag, right under the gift wrap. One code per order, and codes can’t be swapped for cash. The codes that work in the preview are just for trying things out.</p></div>
+          </article>
+        </div>
+      </section>
+      <figure class="pull pull-0" data-after="orders"><blockquote>“Prices are never printed inside a gift.”</blockquote><figcaption>— the angels, chapter 03</figcaption></figure>
+      <section class="chapter ch-post" id="ch-post" data-cat="post">
+        <header class="ch-head"><span class="ch-n">04</span><h2 class="ch-title">Shipping & returns</h2><p class="ch-sub">parcels, timing, changing your mind</p><span class="ch-page">p. 11</span></header>
+        <div class="ch-cols">
+          <article class="qa" id="q-cost" data-cat="post">
+            <h3 class="qa-q"><span class="qa-mark" aria-hidden="true">Q.</span><span class="qa-text">How much is shipping, and when is it free?</span></h3>
+            <p class="qa-by">asked by counting coins, Trieste</p>
+            <div class="qa-a"><span class="qa-mark" aria-hidden="true">A.</span><p>In Italy it’s € 4,90, free from € 40. Every other country has its own rate and free-shipping line. Try the little calculator on our <a href="shipping.html#rates">shipping page</a>.</p></div>
+          </article>
+          <article class="qa" id="q-time" data-cat="post">
+            <h3 class="qa-q"><span class="qa-mark" aria-hidden="true">Q.</span><span class="qa-text">How long will my parcel take to fly to me?</span></h3>
+            <p class="qa-by">asked by waiting by the window</p>
+            <div class="qa-a"><span class="qa-mark" aria-hidden="true">A.</span><p>We pack in 1–2 working days, then it’s 2–4 working days in Italy and 4–7 across the EU. You’ll get a tracking link by email the moment it leaves. <a href="shipping.html#journey">Follow the whole journey</a>.</p></div>
+          </article>
+          <article class="qa" id="q-return" data-cat="post">
+            <h3 class="qa-q"><span class="qa-mark" aria-hidden="true">Q.</span><span class="qa-text">I changed my mind. Can I send it back?</span></h3>
+            <p class="qa-by">asked by fickle heart, Padua</p>
+            <div class="qa-a"><span class="qa-mark" aria-hidden="true">A.</span><p>Yes, within 30 days, as long as it’s unopened and still sealed. For hygiene we can’t take back makeup that has been used, unless it arrived faulty. <a href="shipping.html#returns">How returns work</a>.</p></div>
+          </article>
+          <article class="qa" id="q-broken" data-cat="post">
+            <h3 class="qa-q"><span class="qa-mark" aria-hidden="true">Q.</span><span class="qa-text">My compact arrived broken!</span></h3>
+            <p class="qa-by">asked by heartbroken, Cagliari</p>
+            <div class="qa-a"><span class="qa-mark" aria-hidden="true">A.</span><p>We’re so sorry. Take a photo and <a href="contact.html">write to us</a> within 14 days, and we’ll send a new one for free. You don’t need to send the broken one back.</p></div>
+          </article>
+        </div>
+      </section>
+      <figure class="pull pull-1" data-after="post"><blockquote>“Thirty days, as long as it’s still sealed.”</blockquote><figcaption>— the angels, chapter 04</figcaption></figure>
+      <section class="chapter ch-club" id="ch-club" data-cat="club">
+        <header class="ch-head"><span class="ch-n">05</span><h2 class="ch-title">Account</h2><p class="ch-sub">the Angel club & your data</p><span class="ch-page">p. 14</span></header>
+        <div class="ch-cols">
+          <article class="qa" id="q-account" data-cat="club">
+            <h3 class="qa-q"><span class="qa-mark" aria-hidden="true">Q.</span><span class="qa-text">Do I need an account to shop?</span></h3>
+            <p class="qa-by">asked by free spirit, Lecce</p>
+            <div class="qa-a"><span class="qa-mark" aria-hidden="true">A.</span><p>No. The <a href="account.html">Angel club</a> is just a cosy place for your wishlist, tarot card and vow. Right now it only needs a name, never a password, and it lives on your device.</p></div>
+          </article>
+          <article class="qa" id="q-data" data-cat="club">
+            <h3 class="qa-q"><span class="qa-mark" aria-hidden="true">Q.</span><span class="qa-text">What do you know about me?</span></h3>
+            <p class="qa-by">asked by private person, Parma</p>
+            <div class="qa-a"><span class="qa-mark" aria-hidden="true">A.</span><p>For now, nothing leaves your browser. Your bag, hearts and card are kept on your own device, and you can see and erase every single thing on our <a href="privacy.html#device">privacy page</a>.</p></div>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <div class="fq-none" id="fqNone" hidden>
+      <p class="fq-none-t">Nobody asked <em class="script">that</em> yet</p>
+      <p>Be the first. We’ll answer, and maybe print it in the next issue.</p>
+      <a href="contact.html" class="btn btn-fill">Ask the angels <span class="arrow"></span></a>
+    </div>
+
+    <!-- ============ STILL CURIOUS ============ -->
+    <section class="fq-write">
+      <div class="fq-write-card">
+        <img src="img/deco/wings.png" alt="" class="fq-write-wings">
+        <p class="fq-ps">P.S.</p>
+        <h2 class="sec-title">Still <em class="script">curious?</em></h2>
+        <p>Send us your question. A real angel reads every one and replies within two working days.</p>
+        <div class="btn-row"><a href="contact.html" class="btn btn-fill">Ask us <span class="arrow"></span></a><a href="shipping.html" class="btn btn-line">Shipping &amp; returns <span class="arrow"></span></a></div>
+      </div>
+    </section>
+
+    <!-- ============ SATIN RIBBON ============ -->
+    <section class="ribbon" aria-label="Our promises">
+      <svg viewBox="0 0 1200 220" preserveAspectRatio="none" class="ribbon-svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="satin" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#ffe6ea"/>
+            <stop offset=".45" stop-color="#f5cbd7"/>
+            <stop offset=".55" stop-color="#eeb4c3"/>
+            <stop offset="1" stop-color="#ffdce2"/>
+          </linearGradient>
+          <path id="ribbonPath" d="M-40,120 C150,20 300,200 480,110 S800,20 960,120 S1150,190 1260,90"/>
+        </defs>
+        <use href="#ribbonPath" class="ribbon-band"/>
+        <use href="#ribbonPath" class="ribbon-stitch"/>
+        <text class="ribbon-text"><textPath href="#ribbonPath" id="ribbonText" startOffset="0">
+          never tested on animals ✦ vegan formulas ✦ soft hearts, sharp edges ✦ ribbon tint ✦ fallen lash ✦ pearl dew ✦ never tested on animals ✦ vegan formulas ✦ soft hearts, sharp edges ✦ ribbon tint ✦ fallen lash ✦ pearl dew ✦
+        </textPath></text>
+      </svg>
+    </section>
+
+
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="ft-top">
+      <div class="ft-col">
+        <p class="ft-kicker">from the back cover</p>
+        <p class="ft-quote">“Soft enough to cry in, sharp enough to start a war.”<span>— the moon, probably</span></p>
+        <p class="ft-quote">“I've never seen a halo this glossy.”<span>— a passing cloud</span></p>
+      </div>
+      <div class="ft-col ft-center">
+        <a class="logo logo-md" href="index.html" aria-label="Angeology — home">
+          <img src="img/deco/wing-l.png" alt="" class="logo-wing logo-wing-l">
+          <img src="img/deco/wing-r.png" alt="" class="logo-wing logo-wing-r">
+          <svg class="logo-frame" viewBox="0 0 400 180" aria-hidden="true"><use href="#cartouche"/></svg>
+          <span class="logo-text">
+            <span class="logo-the">the house of</span>
+            <span class="logo-word">Angeology</span>
+            <span class="logo-sub">cruelty free cosmetics</span>
+          </span>
+          <img src="img/deco/bow.png" alt="" class="logo-bow">
+        </a>
+        <p class="ft-promise">No animal was ever harmed to make you pretty.</p>
+      </div>
+      <div class="ft-col">
+        <p class="ft-kicker">index</p>
+        <ul class="ft-links">
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="cruelty-free.html">Cruelty free</a></li>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="shipping.html">Shipping</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="ft-giant" aria-hidden="true">Angeology</p>
+    <div class="ft-bottom">
+      <p>© 2026 Angeology · vegan · cruelty free · never tested on animals</p>
+      <a href="#top" class="text-link">back to the top</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/faq.js"></script>
+</body>
+  <!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <          *
+-->
+</html>

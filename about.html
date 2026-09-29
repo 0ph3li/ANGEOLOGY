@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our story — ANGEOLOGY cruelty free cosmetics</title>
+  <meta name="description" content="The ANGEOLOGY diary: how a kitchen-table gloss became a vegan, cruelty free makeup house for soft hearts with sharp edges.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Montserrat:wght@300;400;500;600&family=Imperial+Script&family=Pinyon+Script&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/story.css">
+</head>
+<body data-loader="short">
+
+  <!-- shared SVG: baroque cartouche for the logo -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#b9bcc6"/>
+        <stop offset=".5" stop-color="#eef0f4"/><stop offset=".7" stop-color="#8e919b"/><stop offset="1" stop-color="#d9dbe1"/>
+      </linearGradient>
+      <pattern id="dots" width="10" height="10" patternUnits="userSpaceOnUse">
+        <rect width="10" height="10" fill="#fff7fa"/><circle cx="5" cy="5" r="1.3" fill="#ffc9da"/>
+      </pattern>
+      <symbol id="cartouche" viewBox="0 0 400 180">
+        <g fill="none" stroke="url(#silver)" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M72,38 C120,18 160,26 200,20 C240,26 280,18 328,38 C352,46 366,62 372,90 C366,118 352,134 328,142 C280,162 240,154 200,160 C160,154 120,162 72,142 C48,134 34,118 28,90 C34,62 48,46 72,38Z" fill="url(#dots)" stroke-width="6"/>
+          <path d="M78,48 C122,30 162,37 200,32 C238,37 278,30 322,48 C342,56 354,70 359,90 C354,110 342,124 322,132 C278,150 238,143 200,148 C162,143 122,150 78,132 C58,124 46,110 41,90 C46,70 58,56 78,48Z" stroke-width="1.6" stroke="#e7a3bb"/>
+          <path d="M28,90 C14,82 4,66 12,52 C20,40 38,44 36,56 C35,64 26,64 25,58" stroke-width="5"/>
+          <path d="M28,90 C14,98 4,114 12,128 C20,140 38,136 36,124 C35,116 26,116 25,122" stroke-width="5"/>
+          <path d="M372,90 C386,82 396,66 388,52 C380,40 362,44 364,56 C365,64 374,64 375,58" stroke-width="5"/>
+          <path d="M372,90 C386,98 396,114 388,128 C380,140 362,136 364,124 C365,116 374,116 375,122" stroke-width="5"/>
+          <path d="M72,38 C62,22 72,8 88,12 C98,15 96,28 86,27" stroke-width="4"/>
+          <path d="M328,38 C338,22 328,8 312,12 C302,15 304,28 314,27" stroke-width="4"/>
+          <path d="M72,142 C62,158 72,172 88,168 C98,165 96,152 86,153" stroke-width="4"/>
+          <path d="M328,142 C338,158 328,172 312,168 C302,165 304,152 314,153" stroke-width="4"/>
+          <path d="M168,24 C160,8 176,0 186,8 C192,13 188,20 182,18" stroke-width="4"/>
+          <path d="M232,24 C240,8 224,0 214,8 C208,13 212,20 218,18" stroke-width="4"/>
+          <path d="M170,156 C162,172 178,180 188,172 C194,167 190,160 184,162" stroke-width="4"/>
+          <path d="M230,156 C238,172 222,180 212,172 C206,167 210,160 216,162" stroke-width="4"/>
+          <path d="M200,172 C190,164 190,156 196,155 C198,155 200,157 200,159 C200,157 202,155 204,155 C210,156 210,164 200,172Z" fill="#f59ab8" stroke-width="1.5"/>
+        </g>
+      </symbol>
+    </defs>
+  </svg>
+
+  <!-- ============ LOADER ============ -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <img class="loader-bow" src="img/deco/bow.png" alt="">
+      <div class="loader-pearls" id="loaderPearls"></div>
+      <p class="loader-word">Angeology</p>
+      <p class="loader-sub"><span id="loaderCount">0</span>% &middot; cruelty free, always</p>
+    </div>
+  </div>
+
+  <!-- ============ NAV: every page, one row, one style ============ -->
+  <header class="topnav" id="topnav">
+    <a class="nav-logo" href="index.html" aria-label="Angeology — home">Angeology</a>
+    <nav aria-label="Main">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="shop.html"><span class="t">Shop</span><span class="s" aria-hidden="true">shop</span></a></li>
+        <li><a href="collections.html"><span class="t">Collections</span><span class="s" aria-hidden="true">collections</span></a></li>
+        <li><a href="lookbook.html"><span class="t">Lookbook</span><span class="s" aria-hidden="true">lookbook</span></a></li>
+        <li><a href="cruelty-free.html"><span class="t">Cruelty free</span><span class="s" aria-hidden="true">cruelty free</span></a></li>
+        <li><a href="about.html" aria-current="page"><span class="t">Our story</span><span class="s" aria-hidden="true">our story</span></a></li>
+        <li><a href="contact.html"><span class="t">Contact</span><span class="s" aria-hidden="true">contact</span></a></li>
+        <li><a href="search.html"><span class="t">Search</span><span class="s" aria-hidden="true">search</span></a></li>
+        <li><a href="account.html"><span class="t">Account</span><span class="s" aria-hidden="true">account</span></a></li>
+        <li><a href="cart.html"><span class="t">Bag (0)</span><span class="s" aria-hidden="true">bag (0)</span></a></li>
+      </ul>
+      <span class="nav-heart" id="navHeart" aria-hidden="true">♡</span>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button>
+  </header>
+
+  <!-- menu overlay (tablet / mobile) -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu-page">
+      <button class="menu-close" id="menuClose">Close</button>
+      <p class="menu-title">Index</p>
+      <ol class="menu-list" id="menuList"></ol>
+      <img src="img/deco/bow.png" alt="" class="menu-bow">
+    </div>
+  </div>
+
+  <main class="story">
+
+    <!-- ============ HERO: the open diary ============ -->
+    <section class="st-hero" id="top">
+      <header class="st-head">
+        <p class="sec-num">01</p>
+        <h1 class="st-title"><span class="hl-in">Our</span> <em class="script hl-in">story</em></h1>
+        <p class="st-sub">a diary, kept since the very first gloss</p>
+      </header>
+      <div class="diary" id="diary">
+        <div class="diary-page dp-left">
+          <p class="dp-date">dear diary,</p>
+          <p class="dp-line">today I refused to put beeswax in my lip gloss.</p>
+          <p class="dp-line">tomorrow I’ll refuse to test it on anything that can’t say yes.</p>
+          <p class="dp-line">one day, a whole makeup house will refuse with me.</p>
+          <p class="dp-sign script">— her, MMXXV</p>
+          <img src="img/deco/pearl.png" alt="" class="dp-pearl">
+        </div>
+        <div class="diary-page dp-right">
+          <figure class="polaroid dp-polaroid">
+            <span class="tape tape-tl"></span><span class="tape tape-tr"></span>
+            <div class="slot" data-img="story-diary.jpg" data-alt="A white table set for tea, where Angeology began" data-ratio="1 / 1"><span class="slot-label">img/story-diary.jpg<br><small>1 : 1</small></span></div>
+            <figcaption>the kitchen table, where it began</figcaption>
+          </figure>
+          <img src="img/deco/bow.png" alt="" class="dp-bow">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DIARY ENTRIES on a string of pearls ============ -->
+    <section class="entries" id="entries" aria-label="Our story, entry by entry">
+      <svg class="string" id="string" viewBox="0 0 100 1000" preserveAspectRatio="none" aria-hidden="true"><path id="stringPath" d="M50,0 C80,100 20,200 50,300 S80,500 50,600 S20,800 50,900 S60,980 50,1000"/></svg>
+      <ol class="entry-list">
+        <li class="entry">
+          <span class="entry-pearl" aria-hidden="true"></span>
+          <div class="entry-card">
+            <p class="entry-date">01 · 02 · 2025</p>
+            <h2 class="entry-title">The first <em class="script">gloss</em></h2>
+            <p>A saucepan, a sunflower wax and a lot of pink. The very first Halo Gloss was stirred on a kitchen table — beeswax was never on the list.</p>
+          </div>
+          <figure class="polaroid entry-photo"><span class="tape tape-tl"></span><div class="slot" data-img="story-1.jpg" data-alt="The first gloss: a pearly topper with a pink cap" data-ratio="1 / 1"><span class="slot-label">img/story-1.jpg<br><small>1 : 1</small></span></div><figcaption>batch n° 1</figcaption></figure>
+        </li>
+        <li class="entry">
+          <span class="entry-pearl" aria-hidden="true"></span>
+          <div class="entry-card">
+            <p class="entry-date">14 · 05 · 2025</p>
+            <h2 class="entry-title">The <em class="script">vow</em></h2>
+            <p>Written on a café napkin: never tested on animals, never made from them. It still lives, framed, above the studio door.</p>
+            <a href="cruelty-free.html" class="text-link">read the vow</a>
+          </div>
+          <img src="img/deco/envelope.png" alt="" class="entry-deco">
+        </li>
+        <li class="entry">
+          <span class="entry-pearl" aria-hidden="true"></span>
+          <div class="entry-card">
+            <p class="entry-date">30 · 09 · 2025</p>
+            <h2 class="entry-title">The <em class="script">name</em></h2>
+            <p>Angeology — the study of angels. Because every girl deserves a halo and a sharp wing. Our very first muse tried the name on like a lip colour, and it fit.</p>
+          </div>
+          <figure class="polaroid entry-photo"><span class="tape tape-tr"></span><div class="slot" data-img="story-2.jpg" data-alt="A model in pink lace holding a compact" data-ratio="1 / 1"><span class="slot-label">img/story-2.jpg<br><small>1 : 1</small></span></div><figcaption>our very first muse</figcaption></figure>
+        </li>
+        <li class="entry">
+          <span class="entry-pearl" aria-hidden="true"></span>
+          <div class="entry-card">
+            <p class="entry-date">12 · 01 · 2026</p>
+            <h2 class="entry-title">The first <em class="script">box</em></h2>
+            <p>Two hundred orders, two hundred satin bows, tied by hand on the living-room floor. Our fingers still remember.</p>
+            <a href="shop.html" class="text-link">see what’s inside now</a>
+          </div>
+          <img src="img/deco/bow.png" alt="" class="entry-deco">
+        </li>
+        <li class="entry">
+          <span class="entry-pearl" aria-hidden="true"></span>
+          <div class="entry-card">
+            <p class="entry-date">today</p>
+            <h2 class="entry-title">Still <em class="script">kind</em></h2>
+            <p>Sixteen vegan formulas, four collections, one lookbook — and still zero animals harmed. The diary keeps going.</p>
+          </div>
+          <img src="img/deco/wings.png" alt="" class="entry-deco entry-wings">
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ FOUNDER LETTER ============ -->
+    <section class="letter-sec" id="letter">
+      <div class="letter-grid">
+        <figure class="founder">
+          <div class="slot" data-img="founder.webp" data-alt="Our founder sitting on the floor among teddy bears" data-ratio="3 / 4"><span class="slot-label">img/founder.jpg<br><small>3 : 4 — portrait</small></span></div>
+          <img src="img/deco/pin.png" alt="" class="founder-pin">
+        </figure>
+        <article class="founder-letter">
+          <span class="tape tape-tr"></span>
+          <p class="fl-kicker">a letter from our founder</p>
+          <p class="fl-dear script">Dear angel,</p>
+          <p>I grew up loving pink things and loud eyeliner, and hating that so much of the makeup I loved had hurt someone small to exist. So I started making my own.</p>
+          <p>Angeology is for the girls who wear lace and bullet belts on the same day. Soft hearts, sharp edges — and a promise that nothing in your makeup bag ever cost an animal anything.</p>
+          <p>Thank you for choosing kind. It’s the prettiest thing you’ll wear.</p>
+          <p class="fl-sign script">with love &amp; glitter,</p>
+          <p class="fl-name">— the founder</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ VALUES: pinned notes ============ -->
+    <section class="values" id="values">
+      <header class="sec-head">
+        <p class="sec-num">04</p>
+        <h2 class="sec-title">What we <em class="script">believe</em></h2>
+      </header>
+      <ul class="notes">
+        <li class="note n1"><img src="img/deco/pin.png" alt="" class="note-pin"><h3>Kind, always</h3><p>Never tested on animals, never made from them. Not a trend — the whole point.</p></li>
+        <li class="note n2"><img src="img/deco/pin.png" alt="" class="note-pin"><h3>Soft &amp; sharp</h3><p>Coquette and alternative aren’t opposites. Wear the bow and the bullet belt.</p></li>
+        <li class="note n3"><img src="img/deco/pin.png" alt="" class="note-pin"><h3>Every doll, every shade</h3><p>Our skin tints and brows come in shades for every angel — and we keep adding more.</p></li>
+        <li class="note n4"><img src="img/deco/pin.png" alt="" class="note-pin"><h3>Less, but prettier</h3><p>Recycled card, refillable compacts and bows you’ll want to keep in your hair.</p></li>
+      </ul>
+    </section>
+
+    <!-- ============ TEAM ============ -->
+    <section class="team" id="team">
+      <header class="sec-head">
+        <p class="sec-num">05</p>
+        <h2 class="sec-title">Meet the <em class="script">angels</em></h2>
+        <p class="sec-sub">the small team behind every bow</p>
+      </header>
+      <ul class="team-list">
+        <li class="member"><figure class="polaroid"><span class="tape tape-tl"></span><div class="slot" data-img="team-1.webp" data-alt="Rosa, chief of gloss, in pink hair rollers" data-ratio="1 / 1"><span class="slot-label">img/team-1.jpg</span></div><figcaption>Rosa</figcaption></figure><p class="m-role">chief of gloss</p><p class="m-fav">can’t live without <a href="shop.html?p=halo-gloss">Halo Gloss</a></p></li>
+        <li class="member"><figure class="polaroid"><span class="tape tape-tr"></span><div class="slot" data-img="team-2.webp" data-alt="Noa, lash whisperer, on a vintage phone" data-ratio="1 / 1"><span class="slot-label">img/team-2.jpg</span></div><figcaption>Noa</figcaption></figure><p class="m-role">lash whisperer</p><p class="m-fav">can’t live without <a href="shop.html?p=fallen-lash">Fallen Lash</a></p></li>
+        <li class="member"><figure class="polaroid"><span class="tape tape-tl"></span><div class="slot" data-img="team-3.webp" data-alt="Bea, keeper of bows, with a ribbon at her neck" data-ratio="1 / 1"><span class="slot-label">img/team-3.jpg</span></div><figcaption>Bea</figcaption></figure><p class="m-role">keeper of bows</p><p class="m-fav">can’t live without <a href="shop.html?p=ribbon-tint">Ribbon Tint</a></p></li>
+        <li class="member"><figure class="polaroid"><span class="tape tape-tr"></span><div class="slot" data-img="team-4.webp" data-alt="Lou, ingredient detective, with her hair up" data-ratio="1 / 1"><span class="slot-label">img/team-4.jpg</span></div><figcaption>Lou</figcaption></figure><p class="m-role">ingredient detective</p><p class="m-fav">can’t live without <a href="shop.html?p=cloud-veil">Cloud Veil</a></p></li>
+      </ul>
+    </section>
+
+    <!-- ============ STUDIO ============ -->
+    <section class="studio" id="studio">
+      <div class="studio-grid">
+        <figure class="studio-a"><div class="slot" data-img="story-3.jpg" data-alt="The pink Angeology studio with arched mirrors and salon chairs" data-ratio="4 / 5"><span class="slot-label">img/story-3.jpg</span></div></figure>
+        <div class="studio-text">
+          <p class="sec-num">06</p>
+          <h2 class="sec-title">Behind the <em class="script">scenes</em></h2>
+          <p>A small pink studio with arched mirrors, velvet walls, too many bows and a “no animals were harmed” sign on every shelf. This is where every shade is mixed, swatched and argued about.</p>
+          <blockquote class="studio-quote">“If it wouldn’t look cute on a doll, it doesn’t leave the studio.”<cite>— house rule n° 1</cite></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEXT PAGE ============ -->
+    <section class="next-page">
+      <p class="np-kicker">to be continued…</p>
+      <h2 class="np-title">Write the next page <em class="script">with us</em></h2>
+      <div class="btn-row">
+        <a href="shop.html" class="btn btn-fill">Visit the shop <span class="arrow"></span></a>
+        <a href="contact.html" class="btn btn-line">Say hello <span class="arrow"></span></a>
+      </div>
+    </section>
+
+    <!-- ============ SATIN RIBBON ============ -->
+    <section class="ribbon" aria-label="Our promises">
+      <svg viewBox="0 0 1200 220" preserveAspectRatio="none" class="ribbon-svg" aria-hidden="true">
+        <defs>
+          <linearGradient id="satin" x1="0" x2="0" y1="0" y2="1">
+            <stop offset="0" stop-color="#ffe6ea"/>
+            <stop offset=".45" stop-color="#f5cbd7"/>
+            <stop offset=".55" stop-color="#eeb4c3"/>
+            <stop offset="1" stop-color="#ffdce2"/>
+          </linearGradient>
+          <path id="ribbonPath" d="M-40,120 C150,20 300,200 480,110 S800,20 960,120 S1150,190 1260,90"/>
+        </defs>
+        <use href="#ribbonPath" class="ribbon-band"/>
+        <use href="#ribbonPath" class="ribbon-stitch"/>
+        <text class="ribbon-text"><textPath href="#ribbonPath" id="ribbonText" startOffset="0">
+          never tested on animals ✦ vegan formulas ✦ soft hearts, sharp edges ✦ ribbon tint ✦ fallen lash ✦ pearl dew ✦ never tested on animals ✦ vegan formulas ✦ soft hearts, sharp edges ✦ ribbon tint ✦ fallen lash ✦ pearl dew ✦
+        </textPath></text>
+      </svg>
+    </section>
+
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="ft-top">
+      <div class="ft-col">
+        <p class="ft-kicker">from the back cover</p>
+        <p class="ft-quote">“Soft enough to cry in, sharp enough to start a war.”<span>— the moon, probably</span></p>
+        <p class="ft-quote">“I've never seen a halo this glossy.”<span>— a passing cloud</span></p>
+      </div>
+      <div class="ft-col ft-center">
+        <a class="logo logo-md" href="index.html" aria-label="Angeology — home">
+          <img src="img/deco/wing-l.png" alt="" class="logo-wing logo-wing-l">
+          <img src="img/deco/wing-r.png" alt="" class="logo-wing logo-wing-r">
+          <svg class="logo-frame" viewBox="0 0 400 180" aria-hidden="true"><use href="#cartouche"/></svg>
+          <span class="logo-text">
+            <span class="logo-the">the house of</span>
+            <span class="logo-word">Angeology</span>
+            <span class="logo-sub">cruelty free cosmetics</span>
+          </span>
+          <img src="img/deco/bow.png" alt="" class="logo-bow">
+        </a>
+        <p class="ft-promise">No animal was ever harmed to make you pretty.</p>
+      </div>
+      <div class="ft-col">
+        <p class="ft-kicker">index</p>
+        <ul class="ft-links">
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="cruelty-free.html">Cruelty free</a></li>
+          <li><a href="about.html">Our story</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="shipping.html">Shipping</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="ft-giant" aria-hidden="true">Angeology</p>
+    <div class="ft-bottom">
+      <p>© 2026 Angeology · vegan · cruelty free · never tested on animals</p>
+      <a href="#top" class="text-link">back to the top</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/story.js"></script>
+</body>
+  <!--
+   *    /\_/\      +
+       ( o.o )   <3  ghostly.grl
+   +    > ^ <          *
+-->
+</html>
